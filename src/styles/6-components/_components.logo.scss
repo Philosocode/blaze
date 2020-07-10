@@ -1,0 +1,9 @@
+.c-logo {
+  cursor: pointer;
+  transition: transform $transition-append;
+  width: 4rem;
+
+  &:hover {
+    transform: rotate(1080deg);
+  }
+}

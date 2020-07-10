@@ -1,0 +1,27 @@
+.c-hero {
+  &__section {
+    min-height: 100vh;
+  }
+
+  &__content {
+    color: $color-grey-darkest;
+
+    position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+  }
+
+  &__title {
+    font-size: $font-size-mega;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    margin-top: -$spacing-medium;
+  }
+
+  &__description {
+    font-size: $font-size-medium;
+    white-space: pre-line;
+  }
+}

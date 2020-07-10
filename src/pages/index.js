@@ -1,14 +1,13 @@
 import React from "react";
 
-import Layout from "../components/layout.component";
+import Layout from "../components/layout/layout.component";
 import SEO from "../components/seo.component";
+import Hero from "../components/hero.component";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Hero />
   </Layout>
 );
 
