@@ -8,9 +8,9 @@ $font-condensed: "Avenir Next Condensed", $font-fallbacks;
 $multiplier: 1.5;
 $font-size-normal: 1.6rem;
 
-$font-size-small: calc(#{$font-size-normal} / #{$multiplier});
-$font-size-smaller: calc(#{$font-size-small} / #{$multiplier});
-$font-size-smallest: calc(#{$font-size-smaller} / #{$multiplier});
+$font-size-small: 1.4rem;
+$font-size-smaller: 1.2rem;
+$font-size-smallest: 1rem;
 
 $font-size-medium: calc(#{$font-size-normal} * #{$multiplier});
 

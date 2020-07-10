@@ -6,8 +6,10 @@
   &__link {
     color: $color-grey-darker;
     display: inline-block;
-    font-family: $font-condensed;
-    font-weight: 600;
+    font-family: $font-primary;
+    font-size: $font-size-smaller;
+    font-weight: 700;
+    letter-spacing: 1.5px;
     margin-right: $spacing-medium;
     position: relative;
     text-decoration: none;
@@ -23,10 +25,10 @@
   }
 
   &__link:after {
-    background-color: $color-red;
+    background: linear-gradient(to right, $color-red-lighter, $color-red);
     content: "";
     display: inline-block;
-    height: 3px; width: 0;
+    height: 2px; width: 0;
     position: absolute;
       bottom: -3px;
       left: 0;
