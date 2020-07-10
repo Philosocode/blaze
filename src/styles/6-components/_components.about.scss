@@ -1,0 +1,81 @@
+.c-about {
+  &__section {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__background {
+    background-color: $color-black;
+    height: 100%; width: 100%;
+    position: absolute;
+      top: 33rem;
+  }
+
+  &__cards {
+    display: flex;
+      justify-content: center;
+  }
+
+  &__card {
+    border-radius: 1px;
+    box-shadow: $box-shadow-material-4;
+  }
+
+  &__card--left {
+    background-color: $color-grey-darkest;    
+    color: $color-off-white;
+    padding: $spacing-larger;
+    width: max-content; max-width: 35vw;
+    z-index: 1;
+  }
+
+  &__description {
+    color: $color-grey-lightest;
+    font-size: $font-size-medium;
+  }
+
+  &__card--right {
+    background-color: $color-off-black;
+    color: $color-grey-lighter;
+    position: relative;
+    transform: translate(-12rem, $spacing-larger);
+    width: 40vw;
+  }
+
+  &__right-content {
+    color: $color-off-white;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  &__column:last-of-type {
+    margin-left: $spacing-larger;
+  }
+
+  &__grid {
+    color: $color-grey-lighter;
+    display: flex;
+  }
+
+  &__list {
+    margin-left: 2.2rem;
+  }
+
+  &__list-item {
+    font-size: 1.8rem;
+    list-style-type: none;
+    position: relative;
+    margin-top: $spacing-smallest;
+  }
+
+  &__list-item:before {
+    color: $color-red;
+    content: "▹";
+    line-height: 1.4;
+    position: absolute;
+      left: -2rem;
+  }
+}
