@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Header from "./header.component";
+import Footer from "./footer.component";
 
 const Layout = ({ children }) => {
   return (
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   );
 };

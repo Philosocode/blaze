@@ -1,0 +1,80 @@
+.c-project {
+  &__section {
+    background-color: $color-off-white;
+    min-height: 80vh;
+    text-align: center;
+  }
+
+  &__content {
+    padding-top: $spacing-large;
+    padding-bottom: $spacing-large;
+  }
+
+  &__grid {
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    margin-top: $spacing-medium;
+  }
+
+  &__container {
+    background-color: $color-off-black;
+    background: linear-gradient(to right, $color-grey-darkest, $color-black);
+    border-radius: 1px;
+    box-shadow: $box-shadow-default;
+    color: $color-off-white;
+    display: flex;
+      align-items: center;
+    overflow: hidden;
+    margin-left: $spacing-medium;
+    margin-right: $spacing-medium;
+    padding: $spacing-medium;
+    position: relative;
+    text-align: center;
+    height: 30rem;
+    width: 40rem;
+
+    &:hover {
+      .c-project__image {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+      .c-project__text {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    opacity: 0;
+    width: 90%;
+    transition: opacity $transition-append;
+    z-index: 2;
+  }
+
+  &__description {
+    margin-bottom: $spacing-medium;
+  }
+
+  &__arrow {
+    display: inline-block;
+    transform: translate(5px);
+    transition: transform $transition-append;
+  }
+
+  &__image-container {
+    position: absolute;
+      top: 0;
+      left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: opacity $transition-append, transform $transition-append;
+  }
+}

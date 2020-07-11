@@ -25,7 +25,7 @@
   }
 
   &__link:after {
-    background: linear-gradient(to right, $color-red-lighter, $color-red);
+    background: linear-gradient(to right, $color-red-lighter, $color-red-dark);
     content: "";
     display: inline-block;
     height: 2px; width: 0;

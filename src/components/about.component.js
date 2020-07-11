@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="o-grid c-about__section">
+    <section className="o-grid c-about__section" id="about">
       <div className="c-about__background"></div>
       <div className="o-grid__item--wide">
         <div className="c-about__cards">
@@ -44,7 +44,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> {/* .c-about__cards */}
       </div>
     </section>
   );

@@ -1,0 +1,21 @@
+.c-contact {
+  &__section {
+    background-color: $color-black;
+    min-height: 100vh;
+  }
+
+  &__content {
+    color: $color-grey-lightest;
+    padding-top: $spacing-larger;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__description {
+    font-size: $font-size-medium;
+    margin-top: $spacing-medium;
+    text-align: center;
+  }
+}
