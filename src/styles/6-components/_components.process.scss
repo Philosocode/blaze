@@ -1,0 +1,57 @@
+.c-process {
+  &__section {
+    background-color: $color-grey-lightest;
+    min-height: 100vh;
+  }
+
+  &__content {
+    padding-top: $spacing-larger;
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+    text-align: center;
+  }
+
+  &__tabs {
+    display: grid;
+      grid-template-columns: repeat(3, 10rem);
+    margin-top: $spacing-medium;
+    position: relative;
+  }
+
+  &__tab {
+    cursor: pointer;
+    font-size: $font-size-normal;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-top: $spacing-smallest;
+    padding-bottom: $spacing-smallest;
+    transition: background-color $transition-append, color $transition-append;
+
+    &:hover, &.is-current {
+      background-color: rgba($color-red-darker, 0.1);
+      color: $color-red-dark;
+    }
+  }
+
+  &__bar {
+    background-color: $color-grey-lighter;
+    height: 3px; width: 100%;
+    grid-column: 1 / -1;
+    margin: 0 auto;
+  }
+
+  &__highlight {
+    background-color: $color-red;
+    height: 3px; width: 100%;
+    position: absolute;
+      bottom: 0;
+    transition: all $transition-append;
+    transition-delay: 100ms;
+    grid-column: 1 / 2;
+
+    &.is-first { transform: translateX(0); }
+    &.is-second { transform: translateX(100%); }
+    &.is-third { transform: translateX(200%); }
+  }
+}

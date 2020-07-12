@@ -1,6 +1,7 @@
 .c-hero {
   &__section {
-    min-height: 100vh;
+    min-height: 110vh;
+    position: relative;
   }
 
   &__content {
@@ -23,5 +24,11 @@
   &__description {
     font-size: $font-size-medium;
     margin-top: $spacing-large;
+  }
+
+  &__waves {
+    position: absolute;
+      bottom: 0;
+    width: 100%;
   }
 }

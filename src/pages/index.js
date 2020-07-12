@@ -5,6 +5,7 @@ import SEO from "../components/seo.component";
 import Hero from "../components/hero.component";
 import About from "../components/about.component";
 import Why from "../components/why.component";
+import Process from "../components/process.component";
 import Feature from "../components/feature.component";
 import Projects from "../components/projects.component";
 import Contact from "../components/contact.component";
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Hero />
     <About />
     <Why />
+    <Process />
     <Feature />
     <Projects />
     <Contact />

@@ -1,15 +1,6 @@
 .c-about {
   &__section {
-    min-height: 110vh;
-    position: relative;
-    overflow: hidden;
-  }
-
-  &__background {
     background-color: $color-black;
-    height: 100%; width: 100%;
-    position: absolute;
-      top: 33rem;
   }
 
   &__cards {

@@ -2,7 +2,11 @@
   &__section {
     background-color: $color-black;
     color: $color-grey-lightest;
-    min-height: 30vh;
+  }
+
+  &__content {
+    padding-top: 20rem;
+    padding-bottom: $spacing-largest;
   }
 
   &__icons {

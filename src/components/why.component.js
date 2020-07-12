@@ -7,7 +7,7 @@ import PerformantIcon from "../icons/performant.svg";
 const Why = () => {
   return (
     <section className="o-grid c-why__section">
-      <div className="o-grid__item--center">
+      <div className="o-grid__item--center c-why__content">
         <div className="c-why__icons">
           <div className="c-why__icon-container">
             <ResponsiveIcon className="c-why__icon" />

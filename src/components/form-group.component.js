@@ -42,7 +42,12 @@ const FormGroup = ({ name, onChange, placeholder, type, value }) => {
           ? renderTextArea()
           : renderInput()
       }
-      <label htmlFor={name} className="c-form__label">{nameCapitalized}</label>
+      {/* eslint-disable */}
+      <label
+        id={name}
+        htmlFor={name}
+        className="c-form__label"
+      >{nameCapitalized}</label>
     </div>
   )
  }
