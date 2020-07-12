@@ -15,18 +15,21 @@ const Header = () => {
 
   function renderNavLinks() {
     return navLinks.map(navLink => (
-      <Link className="c-nav-list__link" to={navLink.path}>{navLink.name}</Link>
+      <Link
+        className="c-heading c-heading--condensed c-header__nav-link" 
+        to={navLink.path}
+      >{navLink.name}</Link>
     ));
   }
 
   return (
     <header className="c-header">
-      <a href="#hero">
-        <Image className="c-logo" fluid={data.logoImage.childImageSharp.fluid} alt="Logo" />
-      </a>
-      <nav>
-        <ul className="c-nav-list">
-          <li className="c-nav-list__item">
+      <Link to="#hero" aria-label="Home">
+        <Image className="c-header__logo" fluid={data.logoImage.childImageSharp.fluid} alt="Logo" />
+      </Link>
+      <nav role="navigation">
+        <ul className="c-header__nav-list">
+          <li className="c-header__nav-item">
             {renderNavLinks()}
           </li>
         </ul>

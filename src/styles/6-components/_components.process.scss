@@ -1,6 +1,6 @@
 .c-process {
   &__section {
-    background-color: $color-grey-lightest;
+    background-color: $color-black;
   }
 
   &__content {
@@ -12,6 +12,10 @@
     text-align: center;
   }
 
+  &__heading {
+    color: $color-grey-lightest;
+  }
+
   &__tabs {
     display: grid;
       grid-template-columns: repeat(3, 10rem);
@@ -20,6 +24,7 @@
   }
 
   &__tab {
+    color: $color-grey-dark;
     cursor: pointer;
     font-size: $font-size-normal;
     font-weight: 600;
@@ -29,13 +34,13 @@
     transition: background-color $transition-append, color $transition-append;
 
     &:hover, &.is-current {
-      background-color: rgba($color-red-darker, 0.1);
-      color: $color-red-dark;
+      background-color: rgba($color-red-lighter, 0.2);
+      color: $color-red;
     }
   }
 
   &__bar {
-    background-color: $color-grey-lighter;
+    background-color: $color-grey-darkest;
     height: 3px; width: 100%;
     grid-column: 1 / -1;
     margin: 0 auto;
@@ -56,14 +61,13 @@
   }
 
   &__card {
-    background-color: $color-grey-lighter;
-    box-shadow: $box-shadow-default;
+    background-color: $color-off-black;
     display: flex;
       align-items: center;
     margin-top: $spacing-large;
-    padding: $spacing-medium $spacing-medium;
+    padding: $spacing-large $spacing-medium;
     text-align: left;
-    width: 66rem;
+    width: 70rem;
 
     &.is-right {
       text-align: right;
@@ -79,21 +83,31 @@
   }
 
   &__icon-container {
-    background-color: $color-grey-light;
+    background-color: rgba($color-grey-darkest, 0.5);
     padding: $spacing-large;
     margin-right: $spacing-medium;
   }
 
   &__icon {
-    color: $color-grey-darker;
-    font-size: 4rem;
+    color: rgba($color-red, 0.8);
+    font-size: 5rem;
   }
 
   &__step {
-    color: $color-grey-dark;
+    color: $color-grey;
     text-transform: uppercase;
-    font-size: $font-size-small;
+    font-size: $font-size-smaller;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+  }
+
+  &__title {
+    color: $color-grey-lightest;
+  }
+
+  &__description {
+    color: $color-grey-light;
+    font-size: 1.8rem;
+    margin-top: 5px;
   }
 }

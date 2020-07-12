@@ -1,17 +1,9 @@
 .c-why {
-  &__section {
-    background-color: $color-black;
-    color: $color-grey-lightest;
-  }
-
-  &__content {
-    padding-top: 20rem;
-    padding-bottom: $spacing-largest;
-  }
-
   &__icons {
     display: flex;
       justify-content: space-between;
+    margin: $spacing-larger auto;
+    width: 100%;
   }
 
   &__icon-container {
@@ -21,11 +13,17 @@
   }
 
   &__icon {
-    stroke: $color-red-light;
+    // color: rgba($color-red, 1);
+    font-size: 4rem;
     margin-bottom: $spacing-medium;
+
+    & path {
+      color: red;
+    }
   }
 
   &__icon-heading {
+    color: rgba($color-red-light, 0.8);
     font-weight: 700;
     letter-spacing: 1px;
   }

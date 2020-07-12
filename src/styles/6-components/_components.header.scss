@@ -1,10 +1,47 @@
 .c-header {
-  height: $header-height;
   display: flex;
     align-items: center;
     justify-content: space-between;
-  padding: 1rem 2.5%;
+  height: $header-height;
+  padding: 1rem $side-gap;
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
+
+  &__logo {
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    width: 4rem;
+
+    &:hover { transform: rotate(1800deg); }
+  }
+
+  &__nav-item {
+    list-style-type: none;
+  }
+
+  &__nav-link {
+    color: $color-off-black;
+    margin-right: $spacing-medium;
+    position: relative;
+    transition: color $transition-append;
+
+    &:hover {
+      color: $color-grey-dark;
+      &:after { width: 100%; }
+    }
+
+    &:last-of-type { margin-right: 0; }
+  }
+
+  &__nav-link:after {
+    background: $red-gradient;
+    content: "";
+    height: 2px; width: 0;
+    position: absolute;
+      bottom: -3px;
+      left: 0;
+    transition: width 100ms ease-in;
+    transition-delay: 100ms;
+  }
 }
