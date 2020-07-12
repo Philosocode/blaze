@@ -21,7 +21,9 @@ const Header = () => {
 
   return (
     <header className="c-header">
-      <Image className="c-logo" fluid={data.logoImage.childImageSharp.fluid} alt="Logo" />
+      <a href="#hero">
+        <Image className="c-logo" fluid={data.logoImage.childImageSharp.fluid} alt="Logo" />
+      </a>
       <nav>
         <ul className="c-nav-list">
           <li className="c-nav-list__item">

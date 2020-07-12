@@ -1,11 +1,11 @@
 .c-process {
   &__section {
     background-color: $color-grey-lightest;
-    min-height: 100vh;
   }
 
   &__content {
     padding-top: $spacing-larger;
+    padding-bottom: $spacing-largest;
     display: flex;
       flex-direction: column;
       align-items: center;
@@ -53,5 +53,47 @@
     &.is-first { transform: translateX(0); }
     &.is-second { transform: translateX(100%); }
     &.is-third { transform: translateX(200%); }
+  }
+
+  &__card {
+    background-color: $color-grey-lighter;
+    box-shadow: $box-shadow-default;
+    display: flex;
+      align-items: center;
+    margin-top: $spacing-large;
+    padding: $spacing-medium $spacing-medium;
+    text-align: left;
+    width: 66rem;
+
+    &.is-right {
+      text-align: right;
+
+      .c-process__icon-container {
+        margin-right: 0;
+        margin-left: $spacing-medium;
+      }
+
+      .c-process__icon { transform: rotateY(180deg); }
+      .c-process__text { order: -1; }
+    }
+  }
+
+  &__icon-container {
+    background-color: $color-grey-light;
+    padding: $spacing-large;
+    margin-right: $spacing-medium;
+  }
+
+  &__icon {
+    color: $color-grey-darker;
+    font-size: 4rem;
+  }
+
+  &__step {
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
 }

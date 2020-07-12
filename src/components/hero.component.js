@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="o-grid c-hero__section">
+    <section className="o-grid c-hero__section" id="hero">
       <div className="o-grid__item--center">
         <div className="c-hero__content">
           <h1 className="c-hero__title">Tam Le</h1>

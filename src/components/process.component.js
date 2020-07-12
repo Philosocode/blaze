@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import { FaPlay, FaComments, FaTh, FaMagic, FaCode, FaRocket } from "react-icons/fa";
 
 import ProcessTab from "./process-tab.component";
+import ProcessCard from "./process-card.component";
 
 const Process = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -14,22 +16,49 @@ const Process = () => {
   });
 
   function getTabs() {
-    const names = ["INIT", "DESIGN", "CODE"];
+    const names = ["START", "DESIGN", "CODE"];
 
     return names.map((name, idx) => (
       <ProcessTab key={name} currentTab={currentTab} setCurrentTab={setCurrentTab} tabId={idx} tabName={name} />
     ));
   }
+
+  function getProcessCards() {
+    const description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis molestiae, corrupti facere aliquam placeat velit illo, excepturi quae consectetur reiciendis recusandae sint a similique mollitia officiis minima. Incidunt, tempora harum";
+    const cardsData = [
+      { title: "Initial Prep", icon: FaPlay },
+      { title: "Brief Chat", icon: FaComments },
+      { title: "Wireframes", icon: FaTh },
+      { title: "Design", icon: FaMagic },
+      { title: "Code", icon: FaCode },
+      { title: "Launch", icon: FaRocket },
+    ];
+
+    return cardsData.map((data, idx) => (
+      <ProcessCard
+        key={data.title}
+        description={description}
+        FaIcon={data.icon}
+        isRight={idx % 2 !== 0}
+        stepNum={idx + 1}
+        title={data.title}
+      />
+    ));
+  }
+
+  const processCards = getProcessCards();
   
   return (
     <section className="o-grid c-process__section" id="process">
-      <div className="o-grid__item--narrow c-process__content">
+      <div className="o-grid__item--center c-process__content">
         <h2>What To Expect</h2>
         <div className="c-process__tabs">
           { getTabs() }
           <div className="c-process__bar"></div>
           <div className={highlightClasses}></div>
         </div>
+        { processCards[currentTab * 2] }
+        { processCards[currentTab * 2 + 1] }
       </div>
     </section>
   )
