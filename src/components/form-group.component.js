@@ -46,7 +46,7 @@ const FormGroup = ({ name, onChange, placeholder, type, value }) => {
       <label
         id={name}
         htmlFor={name}
-        className="c-form__label"
+        className="c-heading--condensed c-form__label"
       >{nameCapitalized}</label>
     </div>
   )

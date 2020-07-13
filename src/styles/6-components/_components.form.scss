@@ -1,11 +1,8 @@
 .c-form {
   &__container {
-    grid-column: 2 / 3;
     margin-top: $spacing-medium;
 
-    @include respond(tab-land) { 
-      margin-top: $spacing-large;
-     }
+    @include respond(tab-land) {  margin-top: $spacing-large; }
   }
 
   &__group {
@@ -14,18 +11,14 @@
     margin-bottom: $spacing-medium;
     width: 100%;
 
-    @include respond(tab-land) { 
-      margin-bottom: $spacing-large;
-    }
+    @include respond(tab-land) { margin-bottom: $spacing-large; }
   }
 
   &__label {
     color: $color-grey-light;
-    font-family: $font-primary;
-    font-weight: 500;
     position: relative;
       left: 2px;
-    transition: all 0.2s ease;
+    transition: all $transition-append;
     order: -1; // position above input
   }
 
@@ -36,11 +29,12 @@
     border-bottom: 1px solid $color-grey-dark;
     color: $color-grey-lightest;
     font-size: $font-size-normal;
+    font-weight: 500;
     line-height: 1.5;
     margin-top: $spacing-smallest;
     transition: border-bottom $transition-append, color $transition-append;
 
-    @include respond(tab-port) { font-size: $font-size-medium; }
+    @include respond(tab-port) { font-size: $font-size-normal-big; }
     
     &:focus {
       background-color: transparent;
@@ -58,8 +52,8 @@
 
   &__input:placeholder-shown ~ &__label  {
     opacity: 0;
-    visibility: hidden;
     transform: translateY(4rem);
+    visibility: hidden;
   }
 
   &__error {

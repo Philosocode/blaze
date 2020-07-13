@@ -3,6 +3,7 @@
   font-weight: 500;
   white-space: pre-line;
 
+  &--centered { text-align: center; }
   &--small { font-size: $font-size-normal-big; }
   &--light { color: $color-grey-lightest; }
 }
