@@ -1,4 +1,5 @@
 import React from "react";
+
 import AboutCardColumn from "./about-card-column.component";
 
 const AboutCardRight = () => {
