@@ -1,7 +1,8 @@
 import React from "react";
+import Image from "gatsby-image";
 import PropTypes from "prop-types";
 
-const ProjectBox = ({ description, imageSrc, title, url }) => (
+const ProjectBox = ({ description, imageFluid, title, url }) => (
   <div className="c-project__container">
 
     <div className="c-project__text">
@@ -13,14 +14,14 @@ const ProjectBox = ({ description, imageSrc, title, url }) => (
       </a>
     </div>
     <div className="c-project__image-container">
-      <img className="c-project__image" src={imageSrc} alt={title} />
+      <Image className="c-project__image" fluid={imageFluid} loading="eager" alt={title} />
     </div>
   </div>
 );
 
 ProjectBox.propTypes = {
   description: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string.isRequired,
+  imageFluid: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 }
