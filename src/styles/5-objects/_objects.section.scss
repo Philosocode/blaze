@@ -2,7 +2,6 @@
   padding-top: $spacing-largest;
   padding-bottom: $spacing-largest;
 
-  &--black {
-    background-color: $color-black;
-  }
+  &--black { background-color: $color-black; }
+  &--dark { background-color: $color-off-black; }
 }
