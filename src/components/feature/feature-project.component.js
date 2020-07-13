@@ -4,11 +4,11 @@ import Tilt from 'react-parallax-tilt';
 import PropTypes from "prop-types";
 
 const FeatureProject = ({ description, imageFluid, technologies, title, url, }) => (
-  <Tilt className="c-feature__project" tiltReverse={true}>
-    <a href={url}>
-      <div className="c-feature__project-text">
-        <h4 className="c-feature__project-title">{title}</h4>
-        <p className="c-body-text c-body-text--small c-feature__description">
+  <a className="c-feature__project" href={url}>
+    <Tilt tiltReverse={true}>
+      <div className="c-feature__text">
+        <h2 className="c-feature__project-title">{title}</h2>
+        <p className="c-body-text c-feature__description">
           {description}
         </p>
         <ul className="c-feature__tech-list">
@@ -19,12 +19,12 @@ const FeatureProject = ({ description, imageFluid, technologies, title, url, }) 
           }
         </ul>
       </div>
-        
       <div className="c-feature__image-container">
         <Image className="c-feature__image" alt={title} fluid={imageFluid} loading="eager" />
       </div>
-    </a>
-  </Tilt>
+      <div className="c-feature__window"></div>
+    </Tilt>
+  </a>
 );
 
 FeatureProject.propTypes = {
