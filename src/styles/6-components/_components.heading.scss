@@ -10,6 +10,12 @@
     text-transform: uppercase;
   }
 
+  &--section {
+    font-size: $font-size-largest;
+  }
+
   // 1-Liners
+  &--light { color: $color-grey-lightest; }
+  &--light-red { color: $color-red-light; }
   &--smaller { font-size: $font-size-smaller; }
 }

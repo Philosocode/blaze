@@ -1,8 +1,4 @@
 .c-process {
-  &__section {
-    background-color: $color-black;
-  }
-
   &__content {
     padding-top: $spacing-larger;
     padding-bottom: $spacing-largest;
@@ -10,10 +6,6 @@
       flex-direction: column;
       align-items: center;
     text-align: center;
-  }
-
-  &__heading {
-    color: $color-grey-lightest;
   }
 
   &__tabs {
@@ -24,9 +16,10 @@
   }
 
   &__tab {
+    border: none;
+    background-color: transparent;
     color: $color-grey-dark;
     cursor: pointer;
-    font-size: $font-size-normal;
     font-weight: 600;
     letter-spacing: 1px;
     padding-top: $spacing-smallest;
@@ -37,6 +30,8 @@
       background-color: rgba($color-red-lighter, 0.2);
       color: $color-red;
     }
+
+    &:active, &:focus { outline: 1px solid $color-grey-darkest}
   }
 
   &__bar {

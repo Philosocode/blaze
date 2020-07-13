@@ -2,24 +2,23 @@ import React from "react";
 import { FaBolt, FaExpandArrowsAlt, FaRulerCombined, FaPenNib } from "react-icons/fa";
 
 const WhyIcons = () => {
+  const iconData = [
+    { icon: FaExpandArrowsAlt, text: "Responsive" },
+    { icon: FaBolt, text: "Performant" },
+    { icon: FaRulerCombined, text: "Pixel-Perfect" },
+    { icon: FaPenNib, text: "Crafted With Care" },
+  ];
+
   return (
     <div className="c-why__icons">
-      <div className="c-why__icon-container">
-        <FaExpandArrowsAlt className="c-why__icon" />
-        <h5 className="c-why__icon-heading">Responsive</h5>
-      </div>
-      <div className="c-why__icon-container">
-        <FaBolt className="c-why__icon" />
-        <h5 className="c-why__icon-heading">Fast & Performant</h5>
-      </div>
-      <div className="c-why__icon-container">
-        <FaRulerCombined className="c-why__icon" />
-        <h5 className="c-why__icon-heading">Pixel-Perfect</h5>
-      </div>
-      <div className="c-why__icon-container">
-        <FaPenNib className="c-why__icon" />
-        <h5 className="c-why__icon-heading">Crafted With Care</h5>
-      </div>
+      {
+        iconData.map(data => (
+          <div className="c-why__icon-container">
+            <data.icon className="c-why__icon" />
+            <h5 className="c-heading c-heading--condensed c-heading--light-red">{data.text}</h5>
+          </div>
+        ))
+      }
     </div>
   )
 }

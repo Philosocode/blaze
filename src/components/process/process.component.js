@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import classNames from "classnames";
 import { FaPlay, FaComments, FaTh, FaMagic, FaCode, FaRocket } from "react-icons/fa";
+import classNames from "classnames";
 
+import WhyIcons from "./why-icons.component";
 import ProcessTab from "./process-tab.component";
 import ProcessCard from "./process-card.component";
-import WhyIcons from "./why-icons.component";
 
 const Process = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -50,9 +50,9 @@ const Process = () => {
   const processCards = getProcessCards();
   
   return (
-    <section className="o-grid c-process__section" id="process">
+    <section className="o-grid o-section o-section--black" id="process">
       <div className="o-grid__item--center c-process__content">
-        <h2 className="c-process__heading">What To Expect</h2>
+        <h2 className="c-heading c-heading--light c-heading--section">What To Expect</h2>
         <WhyIcons />
         <div className="c-process__tabs">
           { getTabs() }
