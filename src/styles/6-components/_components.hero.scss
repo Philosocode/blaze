@@ -22,11 +22,7 @@
   }
 
   &__description {
-    display: inline-block;
-    font-size: $font-size-medium;
     margin-top: $spacing-large;
-    font-weight: 500;
-    white-space: pre-wrap;
   }
 
   &__waves {

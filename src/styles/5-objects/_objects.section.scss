@@ -1,0 +1,8 @@
+.o-section {
+  padding-top: $spacing-largest;
+  padding-bottom: $spacing-largest;
+
+  &--black {
+    background-color: $color-black;
+  }
+}

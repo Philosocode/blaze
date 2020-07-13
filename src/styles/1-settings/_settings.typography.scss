@@ -12,6 +12,8 @@ $font-size-small: 1.4rem;
 $font-size-smaller: 1.2rem;
 $font-size-smallest: 1rem;
 
+$font-size-normal-big: 1.8rem;
+
 $font-size-medium: calc(#{$font-size-normal} * #{$multiplier});
 
 $font-size-large: calc(#{$font-size-medium} * #{$multiplier});

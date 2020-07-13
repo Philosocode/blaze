@@ -1,8 +1,4 @@
 .c-about {
-  &__section {
-    background-color: $color-black;
-  }
-
   &__cards {
     display: flex;
       justify-content: center;
@@ -10,45 +6,35 @@
 
   &__card {
     border-radius: 1px;
-    box-shadow: $box-shadow-material-4;
+    width: 44em; min-width: 44em;
   }
 
   &__card--left {
-    background-color: $color-grey-darkest;    
+    background-color: $color-grey-darkest;
     color: $color-off-white;
     padding: $spacing-larger;
-    width: max-content; max-width: 35vw;
     z-index: 1;
-  }
-
-  &__description {
-    color: $color-grey-lightest;
-    font-size: $font-size-medium;
   }
 
   &__card--right {
     background-color: $color-off-black;
-    color: $color-grey-lighter;
-    position: relative;
-    transform: translate(-12rem, $spacing-larger);
-    width: 40vw;
+    color: $color-grey-lightest;
+    transform: translate(-12rem, 8rem);
   }
 
   &__right-content {
-    color: $color-off-white;
     position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  &__grid {
+    display: flex;
   }
 
   &__column:last-of-type {
     margin-left: $spacing-larger;
-  }
-
-  &__grid {
-    color: $color-grey-lighter;
-    display: flex;
   }
 
   &__list {
@@ -56,14 +42,14 @@
   }
 
   &__list-item {
-    font-size: 1.8rem;
+    color: $color-grey-lighter;
     list-style-type: none;
-    position: relative;
     margin-top: $spacing-smallest;
+    position: relative;
   }
 
   &__list-item:before {
-    color: $color-red;
+    color: $color-red-light;
     content: "▹";
     line-height: 1.4;
     position: absolute;
