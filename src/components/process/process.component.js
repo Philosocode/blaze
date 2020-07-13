@@ -54,6 +54,7 @@ const Process = () => {
       <div className="o-grid__item--center c-process__content">
         <h2 className="c-heading c-heading--light c-heading--section">What To Expect</h2>
         <WhyIcons />
+        
         <div className="c-process__tabs">
           { getTabs() }
           <div className="c-process__bar"></div>

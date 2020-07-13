@@ -2,7 +2,7 @@
   &__icons {
     display: flex;
       justify-content: space-between;
-    margin: 10rem auto;
+    margin-top: $spacing-largest;
     width: 100%;
   }
 
@@ -13,11 +13,8 @@
   }
 
   &__icon {
+    color: $color-red;
     font-size: 4rem;
     margin-bottom: $spacing-medium;
-
-    & path {
-      color: $color-red;
-    }
   }
 }

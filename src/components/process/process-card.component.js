@@ -25,9 +25,9 @@ const ProcessCard = ({ description, FaIcon, isRight, stepNum, title }) => {
         </div>
       </div>
       <div className="c-process__column c-process__text">
-        <h3 className="c-process__step">Step {stepNumToWord()}</h3>
-        <h3 className="c-process__title">{title}</h3>
-        <p className="c-process__description">{description}</p>
+        <h3 className="c-heading--condensed c-process__step">Step {stepNumToWord()}</h3>
+        <h3 className="c-heading--light c-process__title">{title}</h3>
+        <p className="c-body-text c-body-text--small c-process__description">{description}</p>
       </div>
     </div>
   );

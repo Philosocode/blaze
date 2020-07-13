@@ -11,7 +11,7 @@
   &__tabs {
     display: grid;
       grid-template-columns: repeat(3, 10rem);
-    margin-top: $spacing-medium;
+    margin-top: $spacing-largest;
     position: relative;
   }
 
@@ -31,7 +31,7 @@
       color: $color-red;
     }
 
-    &:active, &:focus { outline: 1px solid $color-grey-darkest}
+    &:active, &:focus { outline: 1px solid rgba($color-red-lighter, 0.3)}
   }
 
   &__bar {
@@ -46,7 +46,7 @@
     height: 3px; width: 100%;
     position: absolute;
       bottom: 0;
-    transition: all $transition-append;
+    transition: transform $transition-append;
     transition-delay: 100ms;
     grid-column: 1 / 2;
 
@@ -62,7 +62,7 @@
     margin-top: $spacing-large;
     padding: $spacing-large $spacing-medium;
     text-align: left;
-    width: 70rem;
+    width: 72rem;
 
     &.is-right {
       text-align: right;
@@ -73,7 +73,7 @@
       }
 
       .c-process__icon { transform: rotateY(180deg); }
-      .c-process__text { order: -1; }
+      .c-process__text { order: -1; } // Move the text to the left of the icon
     }
   }
 
@@ -84,25 +84,20 @@
   }
 
   &__icon {
-    color: rgba($color-red, 0.8);
+    color: rgba($color-red, 0.7);
     font-size: 5rem;
   }
 
   &__step {
     color: $color-grey;
-    text-transform: uppercase;
-    font-size: $font-size-smaller;
-    font-weight: 600;
-    letter-spacing: 2px;
   }
 
   &__title {
-    color: $color-grey-lightest;
+    margin-top: 2px;
   }
 
   &__description {
     color: $color-grey-light;
-    font-size: 1.8rem;
     margin-top: 5px;
   }
 }
