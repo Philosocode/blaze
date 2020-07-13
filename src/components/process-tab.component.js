@@ -9,7 +9,7 @@ const ProcessTab = ({ currentTab, setCurrentTab, tabId, tabName }) => {
   });
 
   return (
-    <h3 className={tabClasses} onClick={() => setCurrentTab(tabId)}>{tabName}</h3>
+    <button className={tabClasses} onClick={() => setCurrentTab(tabId)}>{tabName}</button>
   );
 };
 

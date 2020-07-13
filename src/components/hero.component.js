@@ -3,16 +3,12 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="o-grid c-hero__section" id="hero">
-      <div className="o-grid__item--center">
-        <div className="c-hero__content">
-          <h1 className="c-hero__title">Tam Le</h1>
-          <h2 className="c-hero__subtitle">Developer, Designer, Teacher</h2>
-          <p className="c-hero__description">
-            You have an idea. A vision for a product. I can help you build it.
-            <br />
-            Let's work together and make it a reality.
-          </p>
-        </div>
+      <div className="o-grid__item--center c-hero__text">
+        <h1 className="c-hero__title">Tam Le</h1>
+        <h2 className="c-hero__subtitle">Developer, Designer, Teacher</h2>
+        <p className="c-hero__description">{
+          "You have an idea. A vision for a product. I can help you build it.\nLet's work together and make it a reality."
+        }</p>
       </div>
       <div className="o-grid__item--full">
         <svg className="c-hero__waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

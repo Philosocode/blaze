@@ -1,14 +1,14 @@
 .c-hero {
   &__section {
-    min-height: 110vh;
+    min-height: 100vh;
     position: relative;
+
+    @include respond(big-desktop) { min-height: 110vh; }
   }
 
-  &__content {
-    color: $color-grey-darkest;
-
+  &__text {
     position: absolute;
-      top: 30%;
+      top: 20%;
   }
 
   &__title {
@@ -22,13 +22,15 @@
   }
 
   &__description {
+    display: inline-block;
     font-size: $font-size-medium;
     margin-top: $spacing-large;
+    font-weight: 500;
+    white-space: pre-wrap;
   }
 
   &__waves {
     position: absolute;
       bottom: 0;
-    width: 100%;
   }
 }
