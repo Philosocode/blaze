@@ -6,9 +6,9 @@ import philosocodeImage from "../images/philosocode.jpg";
 
 const Projects = () => {
   return (
-    <section className="o-grid c-project__section" id="projects">
-      <div className="o-grid__item--wide c-project__content">
-        <h2>Other Projects</h2>
+    <section className="o-grid o-section" id="projects">
+      <div className="o-grid__item--wide">
+        <h2 className="c-heading c-heading--section c-heading--centered">Other Projects</h2>
 
         <div className="c-project__grid">
           <ProjectBox
@@ -23,7 +23,7 @@ const Projects = () => {
             title="Lilac"
             url="https://tamxle.com/lilac"
           />
-        </div> {/* .c-project__grid */}
+        </div>
       </div>
     </section>
   );

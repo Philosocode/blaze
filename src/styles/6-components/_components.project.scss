@@ -1,33 +1,21 @@
 .c-project {
-  &__section {
-    background-color: $color-off-white;
-    min-height: 80vh;
-    text-align: center;
-  }
-
-  &__content {
-    padding-top: $spacing-large;
-    padding-bottom: $spacing-large;
-  }
-
   &__grid {
     display: flex;
       flex-wrap: wrap;
       justify-content: center;
-    margin-top: $spacing-medium;
+    margin-top: $spacing-large;
   }
 
   &__container {
     background-color: $color-off-black;
-    background: linear-gradient(to right, $color-grey-darkest, $color-black);
+    background: $gradient-dark;
     border-radius: 1px;
     box-shadow: $box-shadow-default;
     color: $color-off-white;
     display: flex;
       align-items: center;
     overflow: hidden;
-    margin-left: $spacing-medium;
-    margin-right: $spacing-medium;
+    margin: auto $spacing-large;
     padding: $spacing-medium;
     position: relative;
     text-align: center;
@@ -39,13 +27,12 @@
         opacity: 0;
         transform: scale(1.2);
       }
-      .c-project__text {
-        opacity: 1;
-      }
+      .c-project__text { opacity: 1; }
     }
   }
 
   &__text {
+    font-weight: 500;
     margin: 0 auto;
     opacity: 0;
     width: 90%;
@@ -67,14 +54,12 @@
     position: absolute;
       top: 0;
       left: 0;
-    height: 100%;
-    width: 100%;
+    height: 100%; width: 100%;
   }
 
   &__image {
     object-fit: cover;
-    height: 100%;
-    width: 100%;
+    height: 100%; width: 100%;
     transition: opacity $transition-append, transform $transition-append;
   }
 }

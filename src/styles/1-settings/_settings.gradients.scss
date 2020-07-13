@@ -1,1 +1,2 @@
-$red-gradient: linear-gradient(to right, $color-red-light, $color-red-dark)
+$gradient-red: linear-gradient(to right, $color-red-light, $color-red-dark);
+$gradient-dark: linear-gradient(to right, $color-grey-darkest, $color-black);
