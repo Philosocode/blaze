@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
   height: $header-height;
-  padding: 1rem $side-gap;
+  padding: 6rem $side-gap;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -12,17 +12,16 @@
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
     width: 4rem;
-
-    &:hover { transform: rotate(1800deg); }
   }
 
   &__nav-item {
+    display: inline-block;
     list-style-type: none;
+    margin-right: $spacing-medium;
   }
 
   &__nav-link {
     color: $color-off-black;
-    margin-right: $spacing-medium;
     position: relative;
     transition: color $transition-append;
 
