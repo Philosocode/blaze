@@ -5,7 +5,7 @@ const AboutCardLeft = () => {
 
   My knowledge of full-stack development, meticulous attention to detail, and focus on best practices enable me to build clean, scalable, and performant applications.
 
-  Currently, I'm working towards a BS. Computer Science with a minor in Mathematics.`
+  Currently, I'm working towards a BS. Computer Science with a minor in Mathematics.`;
 
   return (
     <div className="c-about__card c-about__card--left">

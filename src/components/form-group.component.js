@@ -55,9 +55,9 @@ const FormGroup = ({ name, onChange, placeholder, type, value }) => {
  FormGroup.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired
+  value: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
 }
 
 export default FormGroup;

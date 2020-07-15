@@ -1,0 +1,30 @@
+.c-block-reveal {
+  $animation-duration: 1.2s;
+
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  z-index: 1;
+
+  &__block {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      background-color: $color-red-darker;
+      content: "";
+      opacity: 1;
+      position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      z-index: 10;
+      animation: blockReveal $animation-duration both ease;
+    }
+  }
+
+  &__content {
+    animation: showText $animation-duration steps(1) both;
+  }
+}

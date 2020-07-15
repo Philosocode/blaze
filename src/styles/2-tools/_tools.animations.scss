@@ -1,3 +1,14 @@
+@keyframes blockReveal {
+  0% { transform: translate(-110%, 0); }
+  45%, 55% { transform: translate(0, 0); }
+  100% { transform: translate(110%, 0); }
+}
+
+@keyframes showText {
+  0% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
 @keyframes heightGrowDown {
   0% { height: 0%; }
   100% { height: 100%; }
@@ -10,7 +21,6 @@
   }
 }
 
-.fadeIn { animation: fadeIn; }
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }

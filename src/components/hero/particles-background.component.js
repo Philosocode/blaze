@@ -7,11 +7,11 @@ const particlesConfig = {
       value: 10,
       density: {
         enable: true,
-        value_area: 1000
+        value_area: 900
       }
     },
     color: {
-      value: ['#eb5757', "#33E5B0"]
+      value: ['#eb5757', "#FFA4A4"]
     },
     shape: {
       type: 'circle',
@@ -39,7 +39,7 @@ const particlesConfig = {
       }
     },
     size: {
-      value: 6,
+      value: 7,
       random: true,
       anim: {
         enable: false,

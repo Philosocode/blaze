@@ -7,7 +7,7 @@ import { navLinks } from "../../shared/data.shared";
 const Header = () => { 
   function renderNavLinks() {
     return navLinks.map(navLink => (
-      <li className="c-header__nav-item">
+      <li key={navLink.name} className="c-header__nav-item">
         <Link
           className="c-heading c-heading--condensed c-header__nav-link" 
           to={navLink.path}

@@ -13,7 +13,7 @@ const WhyIcons = () => {
     <div className="c-why__icons">
       {
         iconData.map(data => (
-          <div className="c-why__icon-container">
+          <div key={data.text} className="c-why__icon-container">
             <data.icon className="c-why__icon" />
             <h5 className="c-heading c-heading--condensed c-heading--light-red">{data.text}</h5>
           </div>

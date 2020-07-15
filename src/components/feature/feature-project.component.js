@@ -14,7 +14,7 @@ const FeatureProject = ({ description, imageFluid, technologies, title, url, }) 
         <ul className="c-feature__tech-list">
           {
             technologies.map(tech => (
-              <li className="c-heading c-heading--condensed c-feature__tech-item">{tech}</li>
+              <li key={tech} className="c-heading c-heading--condensed c-feature__tech-item">{tech}</li>
             ))
           }
         </ul>
@@ -29,7 +29,7 @@ const FeatureProject = ({ description, imageFluid, technologies, title, url, }) 
 
 FeatureProject.propTypes = {
   description: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string.isRequired,
+  imageFluid: PropTypes.object.isRequired,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired

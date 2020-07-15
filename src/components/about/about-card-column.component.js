@@ -7,7 +7,7 @@ const AboutCardColumn = ({ heading, items }) => (
     <ul className="c-about__list">
       {
         items.map(item => (
-          <li className="c-body-text c-body-text--small c-about__list-item">{item}</li>
+          <li key={item} className="c-body-text c-body-text--small c-about__list-item">{item}</li>
         ))
       }
     </ul>

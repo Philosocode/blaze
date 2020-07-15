@@ -36,6 +36,7 @@ const Projects = () => {
           {
             projectsData.map(({ description, imageFluid, title, url }) => (
               <ProjectBox
+                key={title}
                 description={description}
                 imageFluid={imageFluid}
                 title={title}

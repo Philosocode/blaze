@@ -35,7 +35,7 @@ const ProcessCard = ({ description, FaIcon, isRight, stepNum, title }) => {
 
 ProcessCard.propTypes = {
   description: PropTypes.string.isRequired,
-  FaIcon: PropTypes.object.isRequired,
+  FaIcon: PropTypes.func.isRequired,
   stepNum: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   isRight: PropTypes.bool,

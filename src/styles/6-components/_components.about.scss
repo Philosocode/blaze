@@ -20,6 +20,7 @@
     background-color: $color-off-black;
     color: $color-grey-lightest;
     transform: translate(-12rem, 8rem);
+    z-index: 0;
   }
 
   &__right-content {

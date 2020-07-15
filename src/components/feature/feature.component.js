@@ -62,6 +62,7 @@ const Feature = () => {
           {
             projectsData.map(({ description, imageFluid, url, technologies, title }) => (
               <FeatureProject
+                key={title}
                 description={description}
                 imageFluid={imageFluid}
                 url={url}
