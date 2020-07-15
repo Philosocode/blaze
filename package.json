@@ -25,6 +25,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "react-parallax-tilt": "^1.4.57",
+    "react-particles-js": "^3.2.1",
     "reaptcha": "^1.7.2"
   },
   "devDependencies": {

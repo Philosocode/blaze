@@ -16,5 +16,21 @@
     color: $color-red;
     font-size: 4rem;
     margin-bottom: $spacing-medium;
+
+    & path {
+      stroke-dasharray: 1000;
+    }
+
+    @keyframes dash {
+      from {
+        stroke-dashoffset: 822;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
   }
+}
+
+.test {
 }
