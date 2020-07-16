@@ -1,0 +1,75 @@
+.c-service {
+  &__cards {
+    display: flex;
+      justify-content: center;
+    width: 100%;
+    margin-top: $spacing-large;
+  }
+
+  &__card {
+    background-color: $color-off-black;
+    border-radius: 1px;
+    color: $color-grey-light;
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    margin: auto $spacing-large;
+    padding: $spacing-large $spacing-medium;
+    text-align: center;
+    height: 100%;
+    transition: transform $transition-append;
+    width: 36rem;
+  }
+
+  &__card:hover {
+    transform: translateY(-8px);
+    .c-service__icon { color: $color-grey-lightest; }
+  }
+
+  &__card:first-child:hover {
+    .c-service__icon-container { background-color: $color-red-faded; }
+    .c-service__heading, .c-service__text { color: $color-red-light; }
+  }
+
+  &__card:nth-child(2):hover {
+    .c-service__icon-container { background-color: $color-green-faded; }
+    .c-service__heading, .c-service__text { color: $color-green-light; }
+  }
+
+  &__card:last-child:hover {
+    .c-service__icon-container { background-color: $color-blue-faded; }
+    .c-service__heading, .c-service__text { color: #85baff; }
+  }
+
+  &__heading {
+    margin-top: $spacing-medium;
+    font-size: $font-size-normal;
+    font-weight: bold;
+    transition: color $transition-append
+  }
+
+  &__text {
+    margin-top: $spacing-small;
+    font-weight: 500;
+    width: 80%;
+    transition: color $transition-append
+  }
+
+  &__icon-container {
+    background-color: $color-grey-faded;
+    border-radius: 50%;
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem;
+    margin: 0 auto;
+    transition: background $transition-append
+  }
+
+  &__icon {
+    color: $color-grey-dark;
+    font-size: 5rem;
+    transition: color $transition-append;
+  }
+}
