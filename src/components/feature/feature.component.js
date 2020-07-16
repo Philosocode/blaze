@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
+import { aosHeadingAttributes } from "../../shared/data.shared";
 import FeatureProject from "./feature-project.component";
 
 const Feature = () => { 
@@ -56,7 +57,10 @@ const Feature = () => {
   return (
     <section className="o-grid o-section o-section--dark" id="featured">
       <div className="o-grid__item--wide">
-        <h2 className="c-heading c-heading--section c-heading--centered c-heading--light">Featured</h2>
+        <h2 
+          className="c-heading c-heading--section c-heading--centered c-heading--light"
+          {...aosHeadingAttributes}
+        >Featured</h2>
 
         <div className="c-feature__projects">
           {

@@ -1,4 +1,5 @@
 .c-header {
+  $animation: moveInTop 0.4s ease-in-out both;
   display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,12 +13,14 @@
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
     width: 4rem;
+    animation: $animation;
   }
 
   &__nav-item {
     display: inline-block;
     list-style-type: none;
     margin-right: $spacing-medium;
+    animation: $animation;
   }
 
   &__nav-link {

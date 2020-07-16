@@ -8,6 +8,9 @@ const ProcessCard = ({ description, FaIcon, isRight, stepNum, title }) => {
     "is-right": isRight
   });
 
+  const aosData = isRight ? "fade-left" : "fade-right";
+  const aosDelay = isRight ? 300 : 0;
+
   function stepNumToWord() {
     if (stepNum === 1) return "One";
     if (stepNum === 2) return "Two";
@@ -18,7 +21,7 @@ const ProcessCard = ({ description, FaIcon, isRight, stepNum, title }) => {
   }
 
   return (
-    <div className={cardClasses}>
+    <div className={cardClasses} data-aos={aosData} data-aos-delay={aosDelay}>
       <div className="c-process__column">
         <div className="c-process__icon-container">
           <FaIcon className="c-process__icon" />

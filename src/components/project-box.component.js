@@ -2,8 +2,8 @@ import React from "react";
 import Image from "gatsby-image";
 import PropTypes from "prop-types";
 
-const ProjectBox = ({ description, imageFluid, title, url }) => (
-  <div className="c-project__container">
+const ProjectBox = ({ description, idx, imageFluid, title, url }) => (
+  <div className="c-project__container" data-aos="fade-up" data-aos-duration={500} data-aos-delay={(idx * 200) + 100}>
     <div className="c-project__text">
       <h3 className="c-project__title">{title}</h3>
       <p className="c-project__description">{description}</p>

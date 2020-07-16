@@ -1,9 +1,11 @@
 .c-hero {
+  $animation: moveInBottom 0.5s ease both;
+
   &__section {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
 
-    @include respond(big-desktop) { min-height: 110vh; }
+    @include respond(big-desktop) { height: 110vh; }
   }
 
   &__text {
@@ -12,21 +14,31 @@
   }
 
   &__title {
+    animation: $animation;
     font-size: 8.98rem;
     font-weight: 600;
   }
 
   &__subtitle {
+    animation: $animation;
     font-weight: 400;
     margin-top: -3rem;
   }
 
   &__description {
+    animation: $animation;
     margin-top: $spacing-large;
   }
 
+  &__particles {
+    animation: fadeIn 0.5s ease-in-out both;
+  }
+
   &__waves {
+    animation: $animation;
+    animation-name: moveInBottomLarge;
     position: absolute;
-      bottom: 0;
+      bottom: -1px;
+    height: auto;
   }
 }

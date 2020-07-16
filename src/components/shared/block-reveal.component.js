@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const BlockReveal = ({ children, className, color, offset, direction, noWrapper }) => {
+const BlockReveal = ({ children, className, color, inline, offset, direction, noWrapper }) => {
   let containerClasses = "c-block-reveal";
   if (className) containerClasses += className;
+  if (inline) containerClasses += " c-block-reveal--inline";
 
   const blockClasses = `c-block-reveal__block c-block-reveal__block--${color} is-${direction}`;
   const aosData = `reveal-${direction}`;
@@ -24,6 +25,7 @@ BlockReveal.propTypes = {
   className: PropTypes.string.isRequired,
   direction: PropTypes.oneOf(["top", "bottom", "left", "right"]).isRequired,
   color: PropTypes.oneOf(["black"]).isRequired,
+  inline: PropTypes.bool,
   noWrapper: PropTypes.bool,
   offset: PropTypes.number,
 };

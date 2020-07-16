@@ -52,11 +52,11 @@
 .c-block-reveal {
   $easing: cubic-bezier(0.83, 0, 0.17, 1);
   $transition-time: 0.7s;
-
-  // display: inline-block;
   overflow: hidden;
   position: relative;
   z-index: 1;
+
+  &--inline { display: inline-block; }
 
   &__block {
     // Match the background

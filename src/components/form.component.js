@@ -47,6 +47,9 @@ const Form = () => {
 
   return (
     <form 
+      data-aos="fade-left"
+      data-aos-offset={300}
+      data-aos-delay={300}
       acceptCharset="UTF-8" 
       action="https://usebasin.com/f/62a47c131769"
       onSubmit={handleSubmit}
