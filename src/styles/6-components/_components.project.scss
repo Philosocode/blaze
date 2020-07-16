@@ -16,7 +16,6 @@
       align-items: center;
     overflow: hidden;
     margin: auto $spacing-large;
-    padding: $spacing-medium;
     position: relative;
     text-align: center;
     height: 30rem;
@@ -35,7 +34,7 @@
     font-weight: 500;
     margin: 0 auto;
     opacity: 0;
-    width: 90%;
+    width: 80%;
     transition: opacity $transition-append;
     z-index: 2;
   }

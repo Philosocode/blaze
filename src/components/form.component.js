@@ -91,6 +91,7 @@ const Form = () => {
           size={ isMobile ? "compact" : "normal" }
           theme="dark"
         />
+        
         <button className="c-button c-button--black c-form__submit" type="submit">SUBMIT</button>
       </div>
       

@@ -4,11 +4,10 @@ import Tilt from 'react-parallax-tilt';
 import PropTypes from "prop-types";
 import BlockReveal from "../shared/block-reveal.component";
 
-const FeatureProject = ({ description, imageFluid, technologies, title, url, }) => ( 
+const FeatureProject = ({ description, idx, imageFluid, technologies, title, url }) => (
   <Tilt className="c-feature__project" tiltReverse={true}>
-    <BlockReveal direction="right" />
+    <BlockReveal direction={idx % 2 === 0 ? "right" : "left"} noWrapper />
     <a href={url}>
-
       <div className="c-feature__text">
         <h2 className="c-feature__project-title">{title}</h2>
         <p className="c-body-text c-feature__description">
@@ -28,10 +27,11 @@ const FeatureProject = ({ description, imageFluid, technologies, title, url, }) 
       <div className="c-feature__window"></div>
     </a>
   </Tilt>
-  );
+ );
 
 FeatureProject.propTypes = {
   description: PropTypes.string.isRequired,
+  idx: PropTypes.number.isRequired,
   imageFluid: PropTypes.object.isRequired,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string.isRequired,

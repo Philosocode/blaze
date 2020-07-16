@@ -1,6 +1,7 @@
 import React from "react";
 
 import AboutCardColumn from "./about-card-column.component";
+import BlockReveal from "../shared/block-reveal.component";
 
 const AboutCardRight = () => {
   const languages = [
@@ -22,6 +23,7 @@ const AboutCardRight = () => {
 
   return (
     <div className="c-about__card c-about__card--right">
+      <BlockReveal color="black" direction="right" offset={500} noWrapper />
       <div className="c-about__right-content">
         <h2>Tech</h2>
         <div className="c-about__grid">

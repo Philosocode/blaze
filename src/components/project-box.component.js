@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 const ProjectBox = ({ description, imageFluid, title, url }) => (
   <div className="c-project__container">
-
     <div className="c-project__text">
       <h3 className="c-project__title">{title}</h3>
       <p className="c-project__description">{description}</p>

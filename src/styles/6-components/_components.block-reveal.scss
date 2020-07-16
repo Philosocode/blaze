@@ -51,11 +51,12 @@
 
 .c-block-reveal {
   $easing: cubic-bezier(0.83, 0, 0.17, 1);
-  $transition-time: 0.8s;
+  $transition-time: 0.7s;
 
-  display: inline-block;
+  // display: inline-block;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 
   &__block {
     // Match the background
@@ -64,10 +65,14 @@
     position: absolute;
       top: 0;
     z-index: 1;
+
+    &--off-white { background: $color-off-white; }
+    &--off-black { background: $color-off-black; }
+    &--black { background: $color-black; }
   }
 
   &__block::before {
-    background: $color-red;
+    background: $color-red-dark;
     content: '';
     position: absolute;
       top: 0;
@@ -75,7 +80,8 @@
       right: 0;
       bottom: 0;
     transition-property: transform;
-    transition-duration: 0.5s;
+    transition-duration: $transition-time;
+    transition-timing-function: $easing;
   }
 
   &__block.is-top.aos-animate::before,

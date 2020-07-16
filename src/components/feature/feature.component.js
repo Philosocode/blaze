@@ -60,8 +60,9 @@ const Feature = () => {
 
         <div className="c-feature__projects">
           {
-            projectsData.map(({ description, imageFluid, url, technologies, title }) => (
+            projectsData.map(({ description, imageFluid, url, technologies, title }, idx) => (
               <FeatureProject
+                idx={idx}
                 description={description}
                 imageFluid={imageFluid}
                 url={url}
