@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Layout from "../components/layout/layout.component";
 import SEO from "../components/seo.component";
@@ -9,16 +11,25 @@ import Feature from "../components/feature/feature.component";
 import Projects from "../components/projects.component";
 import Contact from "../components/contact.component";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero />
-    <About />
-    <Process />
-    <Feature />
-    <Projects />
-    <Contact />
-  </Layout>
-);
+const IndexPage = () => { 
+  useEffect(() => {
+    AOS.init({
+      once: true
+    });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Hero />
+      <About />
+      <Process />
+      <Feature />
+      <Projects />
+      <Contact />
+    </Layout>
+  );
+ };
 
 export default IndexPage;

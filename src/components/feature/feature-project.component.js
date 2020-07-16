@@ -2,10 +2,13 @@ import React from "react";
 import Image from "gatsby-image";
 import Tilt from 'react-parallax-tilt';
 import PropTypes from "prop-types";
+import BlockReveal from "../shared/block-reveal.component";
 
-const FeatureProject = ({ description, imageFluid, technologies, title, url, }) => (
-  <a className="c-feature__project" href={url}>
-    <Tilt tiltReverse={true}>
+const FeatureProject = ({ description, imageFluid, technologies, title, url, }) => ( 
+  <Tilt className="c-feature__project" tiltReverse={true}>
+    <BlockReveal direction="right" />
+    <a href={url}>
+
       <div className="c-feature__text">
         <h2 className="c-feature__project-title">{title}</h2>
         <p className="c-body-text c-feature__description">
@@ -23,9 +26,9 @@ const FeatureProject = ({ description, imageFluid, technologies, title, url, }) 
         <Image className="c-feature__image" alt={title} fluid={imageFluid} loading="eager" />
       </div>
       <div className="c-feature__window"></div>
-    </Tilt>
-  </a>
-);
+    </a>
+  </Tilt>
+  );
 
 FeatureProject.propTypes = {
   description: PropTypes.string.isRequired,

@@ -1,11 +1,11 @@
 import React from "react";
-import ParticlesBackground from "./particles-background.component";
+// import ParticlesBackground from "./particles-background.component";
 
 const Hero = () => {
   return (
     <section className="o-grid c-hero__section" id="hero">
       <div className="o-grid__item--full">
-        <ParticlesBackground />
+        {/* <ParticlesBackground /> */}
       </div>
       <div className="o-grid__item--center c-hero__text">
         <h1 className="c-hero__title">Tam Le</h1>
