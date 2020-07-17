@@ -74,6 +74,7 @@ const Form = () => {
       <FormGroup
         name="message"
         type="textarea"
+        placeholder="What do you need help with?"
         onChange={handleChange}
         value={message}
       />

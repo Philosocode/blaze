@@ -20,18 +20,27 @@
       justify-content: center;
     margin-top: $spacing-large;
     margin-bottom: $spacing-large;
-    width: 120rem;
     padding: $spacing-larger;
+    position: relative;
+    width: 80%; max-width: 100rem;
   }
 
   &__content {
     cursor: pointer;
-    width: 80%;
     margin: 0 auto;
+    width: 80%;
+  }
+
+  &__icon {
+    color: $color-red-faded;
+    font-size: 10rem;
+    position: absolute;
+      top: -3rem;
+      left: -3rem;
   }
 
   &__text {
-    font-size: $font-size-larger;
+    font-size: $font-size-large;
     font-weight: 500;
     white-space: pre-line;
   }
