@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "@brainhubeu/react-carousel";
+import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 
 import { aosHeadingAttributes } from "../../shared/data.shared";
@@ -16,11 +16,14 @@ const Testimonials = () => {
         Testimonials
       </h2>
       <div className="c-testimonial__content">
-        <Carousel
-          addArrowClickHandler
-          arrowLeft={<IoIosArrowBack className="c-testimonial__arrow is-back" />}
-          arrowRight={<IoIosArrowForward className="c-testimonial__arrow is-forward" />}
+        <Slider
+          arrows={false}
+          centerMode
           dots
+          infinite={false}
+          speed={500}
+          slidesToShow={1}
+          slidesToScroll={1}
         >
           <TestimonialCard
             person="Robert Brennan Hart"
@@ -32,7 +35,7 @@ const Testimonials = () => {
             position="Martial Artist and Stunt Performer"
             text={darronText}
           />
-        </Carousel>
+        </Slider>
       </div>
     </section>
   );

@@ -3,14 +3,6 @@
     background-color: $color-grey-lightest;
   }
 
-  &__arrow {
-    color: $color-grey-darker;
-    font-size: 5rem;
-    transition: opacity $transition-append 0.2s, color $transition-append;
-
-    &:hover { color: $color-red; }
-  }
-  
   &__card { 
     background-color: $color-off-white;
     box-shadow: $box-shadow-default;
@@ -18,8 +10,7 @@
     display: flex;
       flex-direction: column;
       justify-content: center;
-    margin-top: $spacing-large;
-    margin-bottom: $spacing-large;
+    margin: $spacing-large auto;
     padding: $spacing-larger;
     position: relative;
     width: 80%; max-width: 100rem;
@@ -58,27 +49,30 @@
   }
 }
 
-.BrainhubCarousel {
-  &__arrow--disable .c-testimonial__arrow {
-    opacity: 0;
-  }
+.slick-dots {
+	display: flex !important;
+	  justify-content: center;
+  list-style-type: none;
+	margin: 0;
+	padding: 1rem 0;
+  
+  li { margin: 0 0.25rem; }
+	
+  button {
+    border: 1px solid $color-grey-lighter;
+    border-radius: 100%;
+    display: block;
+    height: 1.5rem; width: 1.5rem;
+    margin: auto $spacing-smaller;
+    padding: 0;
+    text-indent: -9999px;
+    transition: background $transition-append;
 
-  &__dot {
-    background: transparent;
-    opacity: 1 !important;
-    transition: opacity $transition-append;
+    &:hover { cursor: pointer; }
   }
-
-  &__dot::before {
-    background: transparent!important; // dot colour
-    border: 1px solid $color-grey !important;
-    height: 1.7rem !important; width: 1.7rem !important;
-    transition: border $transition-append;
-  }
-
-  &__dot--selected::before {
-    background: $color-red !important;
-    border: 1px solid transparent !important;
-    opacity: 1;
+	
+  li.slick-active button {
+    border: 1px solid transparent;
+    background-color: $color-red;
   }
 }

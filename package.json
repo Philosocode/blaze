@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@brainhubeu/react-carousel": "^1.19.17",
+    "@brainhubeu/react-carousel": "^1.18.9",
     "aos": "^2.3.4",
     "classnames": "^2.2.6",
     "gatsby": "^2.23.12",
@@ -28,7 +28,10 @@
     "react-icons": "^3.10.0",
     "react-parallax-tilt": "^1.4.57",
     "react-particles-js": "^3.2.1",
-    "reaptcha": "^1.7.2"
+    "react-responsive-carousel": "^3.2.9",
+    "react-slick": "^0.26.1",
+    "reaptcha": "^1.7.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/brainhubeu__react-carousel": "^1.15.0",

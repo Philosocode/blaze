@@ -27,17 +27,17 @@
     .c-service__icon { color: $color-grey-lightest; }
   }
 
-  &__card:first-child:hover {
+  &__card--red:hover {
     .c-service__icon-container { background-color: $color-red-faded; }
     .c-service__heading, .c-service__text { color: $color-red-light; }
   }
 
-  &__card:nth-child(2):hover {
+  &__card--green:hover {
     .c-service__icon-container { background-color: $color-green-faded; }
     .c-service__heading, .c-service__text { color: $color-green-light; }
   }
 
-  &__card:last-child:hover {
+  &__card--blue:hover {
     .c-service__icon-container { background-color: $color-blue-faded; }
     .c-service__heading, .c-service__text { color: $color-blue-light; }
   }
