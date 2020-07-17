@@ -23,7 +23,7 @@ const Testimonials = () => {
       <h2 className="c-heading c-heading--dark c-heading--centered c-heading--section" {...aosHeadingAttributes}>
         Testimonials
       </h2>
-      <div className="c-testimonial__content">
+      <div className="c-testimonial__content" data-aos="fade-right" data-aos-offset={400}>
         <Slider {...sliderOptions}>
           <TestimonialCard
             person="Robert Brennan Hart"

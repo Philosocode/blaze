@@ -2,7 +2,7 @@
   &__container {
     margin-top: $spacing-medium;
 
-    @include respond(tab-land) {  margin-top: $spacing-large; }
+    @include respond(tab-land) { margin-top: $spacing-large; }
   }
 
   &__group {

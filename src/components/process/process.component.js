@@ -56,12 +56,12 @@ const Process = () => {
         <h2 className="c-heading c-heading--light c-heading--section" {...aosHeadingAttributes}>What To Expect</h2>
         <WhyIcons />
         
-        <div className="c-process__tabs" data-aos="fade-up" data-aos-offset={300} data-aos-delay={800}>
+        <div className="c-process__tabs" data-aos="fade-up" data-aos-offset={300}>
           { getTabs() }
           <div className="c-process__bar"></div>
           <div className={highlightClasses}></div>
         </div>
-        <div data-aos="fade-up" data-aos-delay={1000}>
+        <div data-aos="fade-up" data-aos-offset={300}>
           { processCards[currentTab * 2] }
           { processCards[currentTab * 2 + 1] }
         </div>
