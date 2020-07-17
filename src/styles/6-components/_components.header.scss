@@ -31,6 +31,7 @@
       justify-content: center;
     height: 6rem; width: 6rem;
     transition: background-color $transition-append;
+    z-index: 2000;
   }
 
   &__logo {

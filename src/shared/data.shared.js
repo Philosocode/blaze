@@ -1,3 +1,5 @@
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+
 export const navLinks = [
   { path: "#about", name: "About" },
   { path: "#services", name: "Services" },
@@ -7,6 +9,12 @@ export const navLinks = [
   { path: "#testimonials", name: "Testimonials" },
   { path: "#contact", name: "Contact" },
 ]
+
+export const socialIcons = [
+  { icon: FaEnvelope, link: "mailto:hello@tamxle.com" },
+  { icon: FaGithub, link: "https://github.com/Philosocode" },
+  { icon: FaLinkedin, link: "https://www.linkedin.com/in/tamxle/" }
+];
 
 export const aosHeadingAttributes = {
   "data-aos": "fade-up",

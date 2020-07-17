@@ -1,0 +1,63 @@
+.c-burger {
+  $icon-size: 2rem;
+  $icon-color: $color-grey-lighter;
+  $burger-transition: 0.3s 100ms ease-in;
+
+  &__container {
+    cursor: pointer;
+    display: flex;
+    height: 5rem; width: 5rem;
+    outline: none;
+    text-align: center;
+    transition: background-color $burger-transition;
+    z-index: 2000;
+  
+    position: fixed;
+      right: 2.5%;
+      top: 2rem;
+  }
+
+  &__icon {
+    margin-top: 1.9rem;
+    position: relative;
+    transition: background-color $burger-transition, width $burger-transition;
+
+    &.is-hero {
+      background-color: $color-grey-darkest;
+      &::before, &::after { background-color: $color-grey-darkest; }
+    }
+
+    &,
+    &::before,
+    &::after {
+      background-color: $icon-color;
+      display: inline-block;
+      height: 2px; width: 3rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      left: 0;
+      position: absolute;
+      transition: all $burger-transition;
+    }
+
+    &::before { top: -8px; }
+    &::after { top: 8px; }
+  }
+
+  &__icon.is-open {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      background-color: $icon-color;
+      top: 0;
+      width: 3rem;
+    }
+
+    &::before { transform: rotate(-225deg); }
+    &::after { transform: rotate(-495deg); }
+  }
+}

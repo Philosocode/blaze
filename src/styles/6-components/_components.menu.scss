@@ -1,0 +1,73 @@
+.c-menu {
+  &__background {
+    background-color: $color-black;
+    height: 100%;
+    width: 0%;
+    z-index: 1500;
+
+    position: fixed;
+      top: 0;
+      left: 0;
+
+    transition: background-color $transition-append, width 0.5s cubic-bezier(0.5, 0, 0.75, 0);
+
+    &.is-open {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__nav {
+    opacity: 0;
+    transition: all $transition-append;
+    visibility: hidden;
+    width: 100%;
+    z-index: 2000;
+
+    position: fixed;
+      left: 0;
+      top: 11%;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__list {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  &__item {
+    font-family: $font-primary;
+    font-size: $font-size-large;
+    font-weight: bold;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-medium;
+    text-transform: uppercase;
+
+    &:last-of-type { margin-bottom: 0; }
+  }
+
+  &__divider {
+    background-color: $color-grey-dark;
+    height: 1px;
+    margin: $spacing-medium auto;
+    width: 16rem;
+  }
+
+  &__link {
+    color: $color-grey-lighter;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    transition: transform $transition-append;
+
+    &.is-animated {
+      animation: moveInLeft 0.5s ease-in-out both;
+    }
+
+    &:hover { color: $color-red; }
+  }
+}

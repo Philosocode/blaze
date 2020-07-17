@@ -12,7 +12,7 @@ import Projects from "../components/projects/projects.component";
 import Testimonials from "../components/testimonials/testimonials.component";
 import Contact from "../components/contact/contact.component";
 
-const IndexPage = () => { 
+const IndexPage = () => {
   useEffect(() => {
     AOS.init({
       once: true

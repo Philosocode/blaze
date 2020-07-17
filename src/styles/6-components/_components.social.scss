@@ -1,0 +1,17 @@
+.c-social {
+  &__icons {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+    list-style-type: none;
+  }
+
+  &__link {
+    color: $color-grey-lighter;
+    list-style-type: none;
+    font-size: 2.6rem;
+    transition: color $transition-append;
+
+    &:hover { color: $color-red-lighter; }
+  }
+}
