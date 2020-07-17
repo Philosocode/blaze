@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 
 import { aosHeadingAttributes } from "../../shared/data.shared";
+import TestimonialArrow from "./testimonial-arrow.component";
 import TestimonialCard from "./testimonial-card.component";
 
 const Testimonials = () => {
@@ -10,21 +10,21 @@ const Testimonials = () => {
 
   const darronText = `"Tam did a fantastic job designing our company website. He was very professional, skilled, and easy to work with. There were times when we changed our vision for the website during its design phase, but Tam was very flexible in making these changes. He responded very quickly and got the job done. We highly recommend him if you're looking for any development or design services!"`;
 
+  const sliderOptions = {
+    centerMode: true,
+    dots: true,
+    infinite: false,
+    prevArrow: <TestimonialArrow to="prev" />,
+    nextArrow: <TestimonialArrow to="next" />
+  };
+
   return (
     <section className="o-section o-section--white c-testimonial__section" id="testimonials">
       <h2 className="c-heading c-heading--dark c-heading--centered c-heading--section" {...aosHeadingAttributes}>
         Testimonials
       </h2>
       <div className="c-testimonial__content">
-        <Slider
-          arrows={false}
-          centerMode
-          dots
-          infinite={false}
-          speed={500}
-          slidesToShow={1}
-          slidesToScroll={1}
-        >
+        <Slider {...sliderOptions}>
           <TestimonialCard
             person="Robert Brennan Hart"
             position="Founder and Executive Director at Politik™"

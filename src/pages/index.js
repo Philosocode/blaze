@@ -3,7 +3,6 @@ import AOS from "aos";
 
 import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 import Layout from "../components/layout/layout.component";
 import SEO from "../components/shared/seo.component";

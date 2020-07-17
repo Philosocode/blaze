@@ -3,6 +3,14 @@
     background-color: $color-grey-lightest;
   }
 
+  &__arrow {
+    color: $color-grey-dark;
+    font-size: 5rem;
+    transition: color $transition-append, transform $transition-append;
+
+    &:hover { color: $color-red; }
+  }
+
   &__card { 
     background-color: $color-off-white;
     box-shadow: $box-shadow-default;
@@ -48,6 +56,26 @@
     font-size: $font-size-normal;
   }
 }
+
+.slick-arrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;  
+    top: 50%;
+    transform: translateY(-50%);
+  z-index: 10;
+}
+
+.slick-next {
+  right: 0%;
+}
+
+.slick-disabled {
+  opacity: 0;
+  transition: opacity $transition-append;
+}
+
 
 .slick-dots {
 	display: flex !important;
