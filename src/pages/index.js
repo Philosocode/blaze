@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 
-import "aos/dist/aos.css";
-import "slick-carousel/slick/slick.css";
-
 import Layout from "../components/layout/layout.component";
 import SEO from "../components/shared/seo.component";
 import Hero from "../components/hero/hero.component";

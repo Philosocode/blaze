@@ -11,7 +11,7 @@ const ServiceCard = ({ heading, Icon, idx, text }) => {
   });
 
   return (
-    <div data-aos="fade-up" data-aos-delay={(idx * 150)}>
+    <div data-aos="fade-up" data-aos-offset={300} data-aos-delay={(idx * 150)}>
       <div className={cardClasses}>
         <div className="c-service__icon-container">
           <Icon className="c-service__icon" />
