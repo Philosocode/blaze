@@ -16,6 +16,7 @@
 
   // 1-Liners
   &--centered { text-align: center; }
+  &--white { color: $color-off-white; }
   &--light { color: $color-grey-lightest; }
   &--light-red { color: $color-red-light; }
   &--smaller { font-size: $font-size-smaller; }

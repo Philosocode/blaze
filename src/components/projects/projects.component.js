@@ -2,7 +2,7 @@ import React from "react";
 
 import ProjectBox from "./project-box.component";
 import { useStaticQuery, graphql } from "gatsby";
-import { aosHeadingAttributes } from "../shared/data.shared";
+import { aosHeadingAttributes } from "../../shared/data.shared";
 
 const Projects = () => {
   const data = useStaticQuery(graphql`

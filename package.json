@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.19.17",
     "aos": "^2.3.4",
     "classnames": "^2.2.6",
     "gatsby": "^2.23.12",
@@ -30,6 +31,7 @@
     "reaptcha": "^1.7.2"
   },
   "devDependencies": {
+    "@types/brainhubeu__react-carousel": "^1.15.0",
     "prettier": "2.0.5"
   },
   "keywords": [

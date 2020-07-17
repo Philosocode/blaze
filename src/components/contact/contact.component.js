@@ -1,7 +1,7 @@
 import React from "react";
 
-import { aosHeadingAttributes } from "../shared/data.shared";
-import Form from "../components/form.component";
+import { aosHeadingAttributes } from "../../shared/data.shared";
+import Form from "./form.component";
 
 const Contact = () => {
   return (

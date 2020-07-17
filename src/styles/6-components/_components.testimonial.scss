@@ -1,0 +1,75 @@
+.c-testimonial {
+  &__section {
+    background-color: $color-grey-lightest;
+  }
+
+  &__arrow {
+    color: $color-grey-darker;
+    font-size: 5rem;
+    transition: opacity $transition-append 0.2s, color $transition-append;
+
+    &:hover { color: $color-red; }
+  }
+  
+  &__card { 
+    background-color: $color-off-white;
+    box-shadow: $box-shadow-default;
+    border-radius: 3px;
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+    margin-top: $spacing-large;
+    margin-bottom: $spacing-large;
+    width: 120rem;
+    padding: $spacing-larger;
+  }
+
+  &__content {
+    cursor: pointer;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: $font-size-larger;
+    font-weight: 500;
+    white-space: pre-line;
+  }
+
+  &__person {
+    color: $color-grey-darkest;
+    font-weight: bold;
+    font-size: $font-size-medium;
+    margin-top: $spacing-large;
+  }
+
+  &__position {
+    color: $color-grey-darker;
+    font-size: $font-size-normal;
+  }
+}
+
+.BrainhubCarousel {
+  &__arrow--disable .c-testimonial__arrow {
+    opacity: 0;
+  }
+
+  &__dot {
+    background: transparent;
+    opacity: 1 !important;
+    transition: opacity $transition-append;
+  }
+
+  &__dot::before {
+    background: transparent!important; // dot colour
+    border: 1px solid $color-grey !important;
+    height: 1.7rem !important; width: 1.7rem !important;
+    transition: border $transition-append;
+  }
+
+  &__dot--selected::before {
+    background: $color-red !important;
+    border: 1px solid transparent !important;
+    opacity: 1;
+  }
+}

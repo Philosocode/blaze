@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Reaptcha from 'reaptcha';
 
-import { useForm } from "../hooks/use-form.hook";
-import { useMobileChecker } from "../hooks/use-mobile-checker.hook";
+import { useForm } from "../../hooks/use-form.hook";
+import { useMobileChecker } from "../../hooks/use-mobile-checker.hook";
 import FormGroup from "./form-group.component";
 
 const Form = () => {

@@ -39,7 +39,7 @@
 
   &__card:last-child:hover {
     .c-service__icon-container { background-color: $color-blue-faded; }
-    .c-service__heading, .c-service__text { color: #85baff; }
+    .c-service__heading, .c-service__text { color: $color-blue-light; }
   }
 
   &__heading {
