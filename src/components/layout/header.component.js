@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "gatsby";
 import classNames from "classnames";
+import { throttle } from "../../shared/helpers.shared";
 
 import BlazeLogo from "../../icons/blaze.svg";
 import { HeaderContext } from "../../contexts/header.context";
@@ -8,9 +9,39 @@ import { navLinks } from "../../shared/data.shared";
 
 const Header = () => { 
   const { isDark } = useContext(HeaderContext);
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
+
+  const throttledHandler = throttle(handleScroll, 200);
+
+  useEffect(() => {
+    window.addEventListener('scroll', throttledHandler);
+    return () => { window.removeEventListener('scroll', throttledHandler); }
+  }, [throttledHandler]);
+
+  function handleScroll() {
+    const fromTop = window.scrollY;
+    const DELTA = 5;
+
+    // Make sure they scroll more than DELTA
+    if (Math.abs(lastScrollTop - fromTop) <= DELTA) return;
+
+    if (fromTop < DELTA) {
+      setScrollDirection("up");
+    }
+    else if (fromTop > lastScrollTop) {
+      if (scrollDirection !== 'down') setScrollDirection("down");
+    }
+    else if (fromTop + window.innerHeight < document.body.scrollHeight) {
+      if (scrollDirection !== 'up') setScrollDirection("up");
+    }
+
+    setLastScrollTop(fromTop);
+  };
 
   const headerClasses = classNames({
     "c-header": true,
+    "is-hidden": scrollDirection === "down",
     "is-dark": isDark
   });
 

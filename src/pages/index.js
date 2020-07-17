@@ -18,6 +18,7 @@ const IndexPage = () => {
       once: true
     });
     AOS.refresh();
+    window.scrollTo(0, 0);
   }, []);
 
   return (
