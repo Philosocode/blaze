@@ -12,12 +12,7 @@
   }
 
   &__icon {
-    color: var(--color-faded);
-    font-size: 4rem;
+    stroke: var(--color);
     margin-bottom: $spacing-medium;
-
-    & path {
-      stroke-dasharray: 1000;
-    }
   }
 }

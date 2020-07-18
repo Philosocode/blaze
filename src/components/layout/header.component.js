@@ -88,7 +88,7 @@ const Header = () => {
         {
           isMobile
             ? <NavMobile />
-            : <NavMobile />
+            : <NavList />
         }
       </header>
       <div className={pageClasses}></div>
