@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Waypoint } from "react-waypoint";
 
 import { HeaderContext } from "../../contexts/header.context";
-import ParticlesBackground from "./particles-background.component";
+// import ParticlesBackground from "./particles-background.component";
 import Waves from "../../icons/waves.svg";
 
 const Hero = () => {
@@ -26,6 +26,7 @@ const Hero = () => {
           />
         </div>
         <div className="o-grid__item--full">
+          <Waves className="c-hero__waves" style={{ animationDelay: "1800ms" }} />
           <Waves className="c-hero__waves" style={{ animationDelay: "1800ms" }} />
         </div>
       </section>

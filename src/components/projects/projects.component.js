@@ -1,8 +1,9 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import ProjectBox from "./project-box.component";
-import { useStaticQuery, graphql } from "gatsby";
-import { aosHeadingAttributes } from "../../shared/data.shared";
+import SectionHeader from "../shared/section-header.component";
+
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -30,9 +31,10 @@ const Projects = () => {
 
   return (
     <section className="o-grid o-section" id="projects">
+      <div className="o-grid__item--center">
+        <SectionHeader color="white" alignment="left">Projects</SectionHeader>
+      </div>
       <div className="o-grid__item--wide">
-        <h2 className="c-heading c-heading--section c-heading--centered" {...aosHeadingAttributes}>Other Projects</h2>
-
         <div className="c-project__grid">
           {
             projectsData.map(({ description, imageFluid, title, url }, idx) => (

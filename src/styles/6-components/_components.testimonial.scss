@@ -1,8 +1,4 @@
 .c-testimonial {
-  &__section {
-    background-color: $color-grey-lightest;
-  }
-
   &__arrow {
     color: $color-grey-dark;
     font-size: 5rem;
@@ -65,6 +61,8 @@
     top: 50%;
     transform: translateY(-50%);
   z-index: 10;
+
+  &:focus, &:active { outline: none; }
 }
 
 .slick-next {
@@ -97,6 +95,7 @@
     transition: background $transition-append;
 
     &:hover { cursor: pointer; }
+    &:focus, &:active { outline: none; }
   }
 	
   li.slick-active button {

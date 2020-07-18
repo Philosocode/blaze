@@ -1,3 +1,8 @@
 .c-contact {
-  &__text { margin-top: $spacing-small; }
+  &__text {
+    color: $color-grey-lightest;
+    margin-top: $spacing-small; 
+    font-size: $font-size-large;
+    font-weight: 400;
+  }
 }

@@ -4,17 +4,16 @@
   &__projects {
     display: flex;
       flex-direction: column;
-    padding-bottom: $spacing-large;
   }
 
   &__project {
     cursor: pointer;
-    margin-top: $spacing-larger;
+    margin-top: 15rem;
     text-decoration: none;
     text-align: center;
     width: 55%;
 
-    &:first-child { margin-top: $spacing-large; }
+    &:first-child { margin-top: $spacing-largest; }
     &:nth-child(even) { align-self: flex-end; }
   }
 

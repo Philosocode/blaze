@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { aosHeadingAttributes } from "../../shared/data.shared";
+import SectionHeader from "../shared/section-header.component";
 import FeatureProject from "./feature-project.component";
 
 const Feature = () => { 
@@ -57,15 +57,14 @@ const Feature = () => {
   return (
     <section className="o-grid o-section o-section--dark" id="featured">
       <div className="o-grid__item--wide">
-        <h2 
-          className="c-heading c-heading--section c-heading--centered c-heading--light"
-          {...aosHeadingAttributes}
-        >Featured</h2>
-
+        <SectionHeader color="white">Featured</SectionHeader>
+      </div>
+      <div className="o-grid__item--wide">
         <div className="c-feature__projects">
           {
             projectsData.map(({ description, imageFluid, url, technologies, title }, idx) => (
               <FeatureProject
+                key={title}
                 idx={idx}
                 description={description}
                 imageFluid={imageFluid}

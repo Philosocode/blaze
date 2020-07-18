@@ -1,0 +1,45 @@
+.c-section {
+  &__header {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+    margin-bottom: $spacing-large;
+    position: relative;
+
+    &--black {
+      color: $color-off-black;
+      .c-section__line { background-color: $color-off-black; }
+    } 
+    &--grey {
+      color: $color-grey;
+      .c-section__line { background-color: $color-grey; }
+    } 
+    &--red {
+      color: $color-red-faded;
+      .c-section__line { background-color: $color-red-faded; }
+    }
+    &--white {
+      color: $color-grey-lightest;
+      .c-section__line { background-color: $color-grey-lightest; }
+    }
+  }
+
+  &__heading {
+    color: inherit;
+    font-size: 15rem;
+    min-width: max-content;
+
+    &--small {
+      font-size: 5rem;
+    }
+  }
+
+  &__line {
+    background-color: inherit;
+    height: 3px;
+    width: 100%;
+
+    &--left { margin-right: $spacing-larger; }
+    &--right { margin-left: $spacing-larger; }
+  }
+}

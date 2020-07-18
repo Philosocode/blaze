@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 3673 569" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<svg width="100%" height="100%" viewBox="0 0 3673 569" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(1,0,0,1,-0.988684,-0.0116717)">
         <g transform="matrix(1,0,0,1,1,0)">
             <path id="startwave1_1_" d="M0,402L3671.9,402L3672,232.2C3672,232.2 3201.1,274.4 2745.9,96.6C2197.8,-117.4 1769.9,87.6 1709.9,110.9C1563.8,167.4 1342.8,344.7 610.4,164.7C336.1,87.8 0,140.7 0,140.7L0,402Z" style="fill:url(#_Linear1);"/>

@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 
-import { aosHeadingAttributes } from "../../shared/data.shared";
 import TestimonialArrow from "./testimonial-arrow.component";
 import TestimonialCard from "./testimonial-card.component";
+import SectionHeader from "../shared/section-header.component";
 
 const Testimonials = () => {
   const robertText = `"We feel absolutely blessed to have met Tam in the early stages of relaunching Politik™. He is a gifted, intuitive, reliable and responsive web designer and all-around terrific human being. Watch out for this one."`;
@@ -20,9 +20,7 @@ const Testimonials = () => {
 
   return (
     <section className="o-section o-section--white c-testimonial__section" id="testimonials">
-      <h2 className="c-heading c-heading--dark c-heading--centered c-heading--section" {...aosHeadingAttributes}>
-        Testimonials
-      </h2>
+      <SectionHeader color="red">Testimonials</SectionHeader>
       <div className="c-testimonial__content" data-aos="fade-right" data-aos-offset={400}>
         <Slider {...sliderOptions}>
           <TestimonialCard

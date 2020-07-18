@@ -22,9 +22,9 @@ const BlockReveal = ({ children, className, color, inline, offset, direction, no
 
 BlockReveal.propTypes = {
   children: PropTypes.any,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   direction: PropTypes.oneOf(["top", "bottom", "left", "right"]).isRequired,
-  color: PropTypes.oneOf(["black"]).isRequired,
+  color: PropTypes.oneOf(["black"]),
   inline: PropTypes.bool,
   noWrapper: PropTypes.bool,
   offset: PropTypes.number,

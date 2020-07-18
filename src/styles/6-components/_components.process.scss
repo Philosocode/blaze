@@ -1,7 +1,5 @@
 .c-process {
   &__content {
-    padding-top: $spacing-larger;
-    padding-bottom: $spacing-largest;
     display: flex;
       flex-direction: column;
       align-items: center;
@@ -94,6 +92,7 @@
   }
 
   &__title {
+    color:$color-grey-lighter;
     margin-top: 2px;
   }
 

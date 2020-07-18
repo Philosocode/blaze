@@ -14,7 +14,13 @@ export const Burger = ({ menuOpen, toggleMenu }) => {
   });
 
   return (
-    <div className="c-burger__container" onClick={toggleMenu}>
+    <div
+      className="c-burger__container"
+      onClick={toggleMenu}
+      onKeyDown={toggleMenu}
+      role="button"
+      tabIndex={0}
+    >
       <div className={burgerIconClasses} />
     </div>
   );

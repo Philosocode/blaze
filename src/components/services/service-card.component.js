@@ -26,7 +26,7 @@ const ServiceCard = ({ heading, Icon, idx, text }) => {
 ServiceCard.propTypes = {
   heading: PropTypes.string.isRequired,
   idx: PropTypes.number.isRequired,
-  Icon: PropTypes.object.isRequired,
+  Icon: PropTypes.any.isRequired,
   text: PropTypes.string.isRequired,
 }
 

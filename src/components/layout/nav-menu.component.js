@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 
 import { navLinks } from "../../shared/data.shared";
 import NavMobile from "./nav-mobile.component";
-import SocialIcons from "../shared/social-icons.component";
 
 export const NavMenu = ({ menuOpen, toggleMenu }) => {
   const menuBackgroundClasses = classNames({ 
@@ -28,10 +27,10 @@ export const NavMenu = ({ menuOpen, toggleMenu }) => {
     <div className="c-menu__container">
       <div className={menuBackgroundClasses}>&nbsp;</div>
       <nav className={menuNavClasses}>
-        <ul className="c-menu__list" onClick={toggleMenu}>
+        <ul className="c-menu__list">
           {
             navLinks.map((link, idx) => (
-              <li key={link.name} className="c-menu__item">
+              <li key={link.name} className="c-menu__item" onClick={toggleMenu}>
                 <Link
                   to={`${link.path}`}
                   className={menuLinkClasses}

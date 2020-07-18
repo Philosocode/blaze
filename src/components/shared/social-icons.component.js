@@ -10,7 +10,7 @@ const SocialIcons = ({ linkClass }) => {
     <ul className="c-social__icons">
       {
         socialIcons.map(icon => (
-          <li className="c-social__icon">
+          <li key={icon.link} className="c-social__icon">
             <a className={linkClasses} href={icon.link} target="_blank" rel="noopener noreferrer">
               <icon.icon />
             </a>

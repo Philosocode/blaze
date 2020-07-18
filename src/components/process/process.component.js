@@ -5,7 +5,7 @@ import classNames from "classnames";
 import WhyIcons from "./why-icons.component";
 import ProcessTab from "./process-tab.component";
 import ProcessCard from "./process-card.component";
-import { aosHeadingAttributes } from "../../shared/data.shared";
+import SectionHeader from "../shared/section-header.component";
 
 const Process = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -52,8 +52,10 @@ const Process = () => {
   
   return (
     <section className="o-grid o-section o-section--black" id="process">
+      <div className="o-grid__item--wide">
+        <SectionHeader color="red" alignment="left">Process</SectionHeader>
+      </div>
       <div className="o-grid__item--center c-process__content">
-        <h2 className="c-heading c-heading--light c-heading--section" {...aosHeadingAttributes}>What To Expect</h2>
         <WhyIcons />
         
         <div className="c-process__tabs" data-aos="fade-up" data-aos-offset={300}>
