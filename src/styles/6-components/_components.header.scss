@@ -20,6 +20,7 @@
     border-bottom: 1px solid $color-off-black;
 
     .c-header__nav-link { color: $color-grey-lightest; }
+    .c-header__logo-container { background-color: darken($color-grey-faded, 5%); }
     .c-header__logo-background {
       background-color: $color-grey-darkest;
     }
@@ -42,7 +43,7 @@
   }
 
   &__logo-background {
-    background-color: rgba(var(--color-lighter-rgb), 0.2);
+    background-color: rgba(var(--color-rgb), 0.2);
     border-radius: 50%;
     content: "";
     position: absolute;
