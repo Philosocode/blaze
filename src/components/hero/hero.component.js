@@ -1,23 +1,45 @@
 import React, { useContext } from "react";
 import { Waypoint } from "react-waypoint";
 
+import { ANIMATION_DELAY, navLinks } from "../../shared/data.shared";
 import { HeaderContext } from "../../contexts/header.context";
-// import ParticlesBackground from "./particles-background.component";
+import { useMobileChecker } from "../../hooks/use-mobile-checker.hook";
+import ParticlesBackground from "./particles-background.component";
 import Waves from "../../icons/waves.svg";
 
 const Hero = () => {
   const { setDarkHeader, setTransparentHeader } = useContext(HeaderContext);
+  const isMobile = useMobileChecker();
+  
+  function getDelays() {
+    const initialDelay = isMobile
+      ? ANIMATION_DELAY * 3
+      : (ANIMATION_DELAY + 30) * navLinks.length;
+    const NUM_ELS_TO_ANIMATE = 5;
+    const delays = [];
+    
+    for (let i = 1; i <= NUM_ELS_TO_ANIMATE; i++) {
+      delays.push(initialDelay + (ANIMATION_DELAY * i) + "ms");
+    };
+
+    return delays;
+  }
+
+  const delays = getDelays();
 
   return (
     <>
       <section className="o-grid c-hero__section" id="hero">
-        <div className="o-grid__item--full c-hero__particles" style={{ animationDelay: "2200ms" }}>
-          {/* <ParticlesBackground /> */}
+        <div className="o-grid__item--full c-hero__particles" style={{ animationDelay: delays[4] }}>
+          <ParticlesBackground />
         </div>
         <div className="o-grid__item--center c-hero__text">
-          <h1 className="c-hero__title" style={{ animationDelay: "1350ms" }}>Tam Le</h1>
-          <h2 className="c-hero__subtitle" style={{ animationDelay: "1500ms" }}>Developer, Designer, Teacher</h2>
-          <p className="c-body-text c-hero__description" style={{ animationDelay: "1650ms" }}>{
+          <h1
+            className="c-hero__title"
+            style={{ animationDelay: delays[0] }}
+          >Tam Le</h1>
+          <h2 className="c-hero__subtitle" style={{ animationDelay: delays[1] }}>Developer, Designer, Teacher</h2>
+          <p className="c-body-text c-hero__description" style={{ animationDelay: delays[2] }}>{
             "You have an idea. A vision for a product. I can help you build it.\nLet's work together and make it a reality."
           }</p>
           <Waypoint
@@ -26,8 +48,7 @@ const Hero = () => {
           />
         </div>
         <div className="o-grid__item--full">
-          <Waves className="c-hero__waves" style={{ animationDelay: "1800ms" }} />
-          <Waves className="c-hero__waves" style={{ animationDelay: "1800ms" }} />
+          <Waves className="c-hero__waves" style={{ animationDelay: delays[3] }} />
         </div>
       </section>
     </>

@@ -10,6 +10,7 @@ import ZephyrLogo from "../../icons/zephyr.svg";
 import NavMobile from "./nav-mobile.component";
 import NavList from "./nav-list.component";
 import ScrollLock from "react-scrolllock";
+import { ANIMATION_DELAY, navLinks } from "../../shared/data.shared";
 
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
@@ -18,6 +19,26 @@ const Header = () => {
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
+
+  const animationDelay = isMobile
+    ? ANIMATION_DELAY * 2
+    : ANIMATION_DELAY * navLinks.length;
+
+  const headerClasses = classNames({
+    "c-header": true,
+    "is-hidden": scrollDirection === "down",
+    "is-dark": isDark
+  });
+
+  const logoAttributes = {
+    onClick: toggleTheme,
+    style: { animationDelay: `${animationDelay}ms` }
+  };
+
+  const pageClasses = classNames({
+    "c-header__page": true,
+    "is-active": pageAnimating
+  });
   
   const throttledHandler = throttle(handleScroll, 200);
   
@@ -48,24 +69,9 @@ const Header = () => {
 
   function toggleTheme() {
     setPageAnimating(true);
-    setTimeout(() => toggleBlaze(), 1000);
+    setTimeout(() => toggleBlaze(), 400);
     setTimeout(() => setPageAnimating(false), 1500);
   }
-
-  const headerClasses = classNames({
-    "c-header": true,
-    "is-hidden": scrollDirection === "down",
-    "is-dark": isDark
-  });
-
-  const logoAttributes = {
-    onClick: toggleTheme,
-  };
-
-  const pageClasses = classNames({
-    "c-header__page": true,
-    "is-active": pageAnimating
-  });
 
   return (
     <>

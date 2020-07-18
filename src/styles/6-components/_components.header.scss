@@ -64,10 +64,10 @@
   }
 
   &__nav-item {
+    animation: $animation;
     display: inline-block;
     list-style-type: none;
     margin-right: $spacing-medium;
-    animation: $animation;
   }
 
   &__nav-link {

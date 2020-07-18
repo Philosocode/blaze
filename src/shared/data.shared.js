@@ -21,3 +21,5 @@ export const aosHeadingAttributes = {
   "data-aos-offset": 300,
   "data-aos-duration": 500,
 };
+
+export const ANIMATION_DELAY = 150;

@@ -4,6 +4,7 @@
   $burger-transition: 0.3s 100ms ease-in;
 
   &__container {
+    animation: moveInTop 0.4s ease-in-out both;
     cursor: pointer;
     display: flex;
     height: 5rem; width: 5rem;

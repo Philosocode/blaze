@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import { navLinks } from "../../shared/data.shared";
+import { navLinks, ANIMATION_DELAY } from "../../shared/data.shared";
 
 const NavList = () => {
   function renderNavLinks() {
@@ -9,7 +9,7 @@ const NavList = () => {
       <li
         key={navLink.name}
         className="c-header__nav-item"
-        style={{ animationDelay: 1050 - idx * 150 + "ms" }}
+        style={{ animationDelay: (ANIMATION_DELAY * navLinks.length) - idx * ANIMATION_DELAY + "ms" }}
       >
         <Link
           className="c-heading c-heading--condensed c-header__nav-link"
