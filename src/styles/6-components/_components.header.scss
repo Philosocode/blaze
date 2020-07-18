@@ -93,4 +93,16 @@
     transition: width 100ms ease-in;
     transition-delay: 100ms;
   }
+
+  &__page {
+    background-color: $color-black;
+    position: fixed;
+    height: 100vh; width: 300vw;
+    transform: translateX(-300vw);
+    z-index: 9999;
+
+    &.is-active {
+      animation: pageTransition 2s ease-in-out backwards 1;
+    }
+  }
 }

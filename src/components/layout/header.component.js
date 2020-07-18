@@ -13,18 +13,14 @@ import NavList from "./nav-list.component";
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
   const { isBlaze, toggleBlaze } = useContext(ThemeContext);
+  const [pageAnimating, setPageAnimating] = useState(false);
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
 
-  const headerClasses = classNames({
-    "c-header": true,
-    "is-hidden": scrollDirection === "down",
-    "is-dark": isDark
-  });
-
+  
   const throttledHandler = throttle(handleScroll, 200);
-
+  
   useEffect(() => {
     window.addEventListener('scroll', throttledHandler);
     return () => { window.removeEventListener('scroll', throttledHandler); }
@@ -50,26 +46,46 @@ const Header = () => {
     setLastScrollTop(fromTop);
   };
 
+  function toggleTheme() {
+    setPageAnimating(true);
+    setTimeout(() => toggleBlaze(), 1000);
+    setTimeout(() => setPageAnimating(false), 2000);
+  }
+
+  const headerClasses = classNames({
+    "c-header": true,
+    "is-hidden": scrollDirection === "down",
+    "is-dark": isDark
+  });
+
   const logoAttributes = {
-    onClick: toggleBlaze,
+    onClick: toggleTheme,
   };
 
+  const pageClasses = classNames({
+    "c-header__page": true,
+    "is-active": pageAnimating
+  });
+
   return (
-    <header className={headerClasses}>
-      <div className="c-header__logo-container" aria-label="Logo">
-        <div className="c-header__logo-background"></div>
+    <>
+      <header className={headerClasses}>
+        <div className="c-header__logo-container" aria-label="Logo">
+          <div className="c-header__logo-background"></div>
+          {
+            isBlaze 
+              ? <BlazeLogo className="c-header__logo" {...logoAttributes} />
+              : <ZephyrLogo className="c-header__logo is-zephyr" {...logoAttributes} />
+          }
+        </div>
         {
-          isBlaze 
-            ? <BlazeLogo className="c-header__logo" {...logoAttributes} />
-            : <ZephyrLogo className="c-header__logo is-zephyr" {...logoAttributes} />
+          isMobile
+            ? <NavMobile />
+            : <NavList />
         }
-      </div>
-      {
-        isMobile
-          ? <NavMobile />
-          : <NavList />
-      }
-    </header>
+      </header>
+      <div className={pageClasses}></div>
+    </>
   );
  }
 
