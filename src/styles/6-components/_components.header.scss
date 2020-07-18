@@ -71,12 +71,12 @@
   }
 
   &__nav-link {
-    color: $color-off-black;
+    color: $color-grey-lighter;
     position: relative;
     transition: color $transition-append;
 
     &:hover {
-      color: $color-grey-dark;
+      color: $color-grey-lightest;
       &:after { width: 100%; }
     }
 

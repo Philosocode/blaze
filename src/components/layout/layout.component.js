@@ -15,7 +15,7 @@ import Loader from "../shared/loader.component";
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
-  if (isLoading) return <Loader finishLoading={() => setIsLoading(false)} />
+  // if (isLoading) return <Loader finishLoading={() => setIsLoading(false)} />
 
   return (
     <>

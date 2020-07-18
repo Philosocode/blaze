@@ -14,12 +14,12 @@ const Hero = () => {
   function getDelays() {
     const initialDelay = isMobile
       ? ANIMATION_DELAY * 3
-      : (ANIMATION_DELAY + 30) * navLinks.length;
+      : (ANIMATION_DELAY + 50) * navLinks.length;
     const NUM_ELS_TO_ANIMATE = 5;
     const delays = [];
     
     for (let i = 1; i <= NUM_ELS_TO_ANIMATE; i++) {
-      delays.push(initialDelay + (ANIMATION_DELAY * i) + "ms");
+      delays.push(initialDelay + (ANIMATION_DELAY * i));
     };
 
     return delays;
@@ -30,16 +30,16 @@ const Hero = () => {
   return (
     <>
       <section className="o-grid c-hero__section" id="hero">
-        <div className="o-grid__item--full c-hero__particles" style={{ animationDelay: delays[4] }}>
+        <div className="o-grid__item--full c-hero__particles" style={{ animationDelay: `${delays[4] + 100}ms` }}>
           <ParticlesBackground />
         </div>
         <div className="o-grid__item--center c-hero__text">
           <h1
             className="c-hero__title"
-            style={{ animationDelay: delays[0] }}
+            style={{ animationDelay: `${delays[0]}ms` }}
           >Tam Le</h1>
-          <h2 className="c-hero__subtitle" style={{ animationDelay: delays[1] }}>Developer, Designer, Teacher</h2>
-          <p className="c-body-text c-hero__description" style={{ animationDelay: delays[2] }}>{
+          <h2 className="c-hero__subtitle" style={{ animationDelay: `${delays[1]}ms` }}>Developer, Designer, Teacher</h2>
+          <p className="c-body-text c-hero__description" style={{ animationDelay: `${delays[2]}ms` }}>{
             "You have an idea. A vision for a product. I can help you build it.\nLet's work together and make it a reality."
           }</p>
           <Waypoint
@@ -48,7 +48,7 @@ const Hero = () => {
           />
         </div>
         <div className="o-grid__item--full">
-          <Waves className="c-hero__waves" style={{ animationDelay: delays[3] }} />
+          <Waves className="c-hero__waves" style={{ animationDelay: `${delays[3]}ms` }} />
         </div>
       </section>
     </>

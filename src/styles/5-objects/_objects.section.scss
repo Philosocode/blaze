@@ -2,6 +2,7 @@
   padding-top: $spacing-section;
   padding-bottom: $spacing-section;
 
+  &--white { background-color: $color-grey-lightest; }
   &--black { background-color: $color-black; }
   &--dark { background-color: $color-off-black; }
 }

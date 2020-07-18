@@ -1,4 +1,5 @@
 body {
+  background: radial-gradient(circle, $color-grey, var(--color-dark), $color-black);
   font-family: $font-primary;
   font-size: 1.6rem;
   line-height: 1.5;

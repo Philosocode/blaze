@@ -1,6 +1,6 @@
 .c-burger {
   $icon-size: 2rem;
-  $icon-color: $color-grey-lighter;
+  $icon-color: $color-grey-lightest;
   $burger-transition: 0.3s 100ms ease-in;
 
   &__container {
@@ -18,14 +18,14 @@
       top: 2rem;
   }
 
-  &__icon {
+  &__line {
     margin-top: 1.9rem;
     position: relative;
     transition: background-color $burger-transition, width $burger-transition;
 
     &.is-hero {
-      background-color: $color-grey-darkest;
-      &::before, &::after { background-color: $color-grey-darkest; }
+      background-color: $color-grey-light;
+      &::before, &::after { background-color: $color-grey-light; }
     }
 
     &,
@@ -39,16 +39,16 @@
     &::before,
     &::after {
       content: "";
-      left: 0;
       position: absolute;
-      transition: all $burger-transition;
+        left: 0;
+      transition: transform $burger-transition;
     }
 
-    &::before { top: -8px; }
-    &::after { top: 8px; }
+    &::before { transform: translateY(-8px); }
+    &::after { transform: translateY(8px); }
   }
 
-  &__icon.is-open {
+  &__container.is-open &__line {
     background-color: transparent;
 
     &::before,
@@ -58,7 +58,7 @@
       width: 3rem;
     }
 
-    &::before { transform: rotate(-225deg); }
-    &::after { transform: rotate(-495deg); }
+    &::before { transform: translateY(0) rotate(315deg); }
+    &::after { transform: translateY(0) rotate(405deg); }
   }
 }

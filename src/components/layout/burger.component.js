@@ -7,21 +7,19 @@ import { HeaderContext } from "../../contexts/header.context";
 export const Burger = ({ menuOpen, toggleMenu }) => {
   const { isDark } = useContext(HeaderContext);
 
-  const burgerIconClasses = classNames({
-    "c-burger__icon": true,
+  const containerClasses = classNames({
+    "c-burger__container": true,
     "is-open": menuOpen,
     "is-hero": !isDark
   });
 
   return (
     <div
-      className="c-burger__container"
+      className={containerClasses}
       onClick={toggleMenu}
-      onKeyDown={toggleMenu}
       role="button"
-      tabIndex={0}
     >
-      <div className={burgerIconClasses} />
+      <div className="c-burger__line"></div>
     </div>
   );
 };

@@ -21,8 +21,8 @@ const Header = () => {
   const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
 
   const animationDelay = isMobile
-    ? ANIMATION_DELAY * 2
-    : ANIMATION_DELAY * navLinks.length;
+    ? (ANIMATION_DELAY + 50)
+    : (ANIMATION_DELAY + 30) * navLinks.length;
 
   const headerClasses = classNames({
     "c-header": true,
@@ -70,8 +70,8 @@ const Header = () => {
 
   function toggleTheme() {
     setPageAnimating(true);
-    setTimeout(() => toggleBlaze(), 400);
-    setTimeout(() => setPageAnimating(false), 1500);
+    setTimeout(() => toggleBlaze(), 500);
+    setTimeout(() => setPageAnimating(false), 1700);
   }
 
   return (
@@ -88,7 +88,7 @@ const Header = () => {
         {
           isMobile
             ? <NavMobile />
-            : <NavList />
+            : <NavMobile />
         }
       </header>
       <div className={pageClasses}></div>

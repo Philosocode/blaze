@@ -1,6 +1,6 @@
 .c-testimonial {
   &__arrow {
-    color: $color-grey-dark;
+    color: $color-grey-darker;
     font-size: 5rem;
     transition: color $transition-append, transform $transition-append;
 
@@ -8,8 +8,7 @@
   }
 
   &__card { 
-    background-color: $color-off-white;
-    box-shadow: $box-shadow-default;
+    background-color: $color-off-black;
     border-radius: 3px;
     display: flex;
       flex-direction: column;
@@ -35,20 +34,21 @@
   }
 
   &__text {
+    color: $color-grey-lighter;
     font-size: $font-size-large;
     font-weight: 500;
     white-space: pre-line;
   }
 
   &__person {
-    color: $color-grey-darkest;
+    color: $color-grey-lighter;
     font-weight: bold;
     font-size: $font-size-medium;
     margin-top: $spacing-large;
   }
 
   &__position {
-    color: $color-grey-darker;
+    color: $color-grey-lighter;
     font-size: $font-size-normal;
   }
 }
@@ -74,7 +74,6 @@
   transition: opacity $transition-append;
 }
 
-
 .slick-dots {
 	display: flex !important;
 	  justify-content: center;
@@ -86,7 +85,7 @@
 	
   button {
     background-color: transparent;
-    border: 1px solid $color-grey-lighter;
+    border: 2px solid $color-grey-darkest;
     border-radius: 100%;
     display: block;
     height: 1.5rem; width: 1.5rem;
@@ -100,7 +99,7 @@
   }
 	
   li.slick-active button {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     background-color: var(--color-faded);
   }
 }
