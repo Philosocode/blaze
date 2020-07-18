@@ -9,6 +9,7 @@ import BlazeLogo from "../../icons/blaze.svg";
 import ZephyrLogo from "../../icons/zephyr.svg";
 import NavMobile from "./nav-mobile.component";
 import NavList from "./nav-list.component";
+import ScrollLock from "react-scrolllock";
 
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
@@ -17,7 +18,6 @@ const Header = () => {
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
-
   
   const throttledHandler = throttle(handleScroll, 200);
   
@@ -49,7 +49,7 @@ const Header = () => {
   function toggleTheme() {
     setPageAnimating(true);
     setTimeout(() => toggleBlaze(), 1000);
-    setTimeout(() => setPageAnimating(false), 2000);
+    setTimeout(() => setPageAnimating(false), 1500);
   }
 
   const headerClasses = classNames({
@@ -85,6 +85,7 @@ const Header = () => {
         }
       </header>
       <div className={pageClasses}></div>
+      <ScrollLock isActive={pageAnimating} />
     </>
   );
  }
