@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Link } from "gatsby";
 import classNames from "classnames";
 import { throttle } from "../../shared/helpers.shared";
 
@@ -7,12 +6,13 @@ import { HeaderContext } from "../../contexts/header.context";
 import { ThemeContext } from "../../contexts/theme.context";
 import { useMobileChecker } from "../../hooks/use-mobile-checker.hook";
 import BlazeLogo from "../../icons/blaze.svg";
+import ZephyrLogo from "../../icons/zephyr.svg";
 import NavMobile from "./nav-mobile.component";
 import NavList from "./nav-list.component";
 
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
-  const { toggleBlaze } = useContext(ThemeContext);
+  const { isBlaze, toggleBlaze } = useContext(ThemeContext);
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
@@ -50,10 +50,19 @@ const Header = () => {
     setLastScrollTop(fromTop);
   };
 
+  const logoAttributes = {
+    onClick: toggleBlaze,
+  };
+
   return (
     <header className={headerClasses}>
-      <div className="c-header__logo-container" aria-label="Home">
-        <BlazeLogo onClick={toggleBlaze} className="c-header__logo" style={{ animationDelay: "1200ms" }} />
+      <div className="c-header__logo-container" aria-label="Logo">
+        <div className="c-header__logo-background"></div>
+        {
+          isBlaze 
+            ? <BlazeLogo className="c-header__logo" {...logoAttributes} />
+            : <ZephyrLogo className="c-header__logo is-zephyr" {...logoAttributes} />
+        }
       </div>
       {
         isMobile
