@@ -38,10 +38,10 @@
     
     &:focus {
       background-color: transparent;
-      border-bottom: 1px solid $color-green-dark;
+      border-bottom: 1px solid $color-green-light;
       outline: none;
 
-      &:invalid { border-bottom: 1px solid $color-red-dark; }
+      &:invalid { border-bottom: 1px solid $color-red; }
     }
 
     &::-webkit-input-placeholder {

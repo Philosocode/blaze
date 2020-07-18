@@ -51,7 +51,7 @@
   }
 
   &__list-item:before {
-    color: $color-red-light;
+    color: var(--color-light);
     content: "▹";
     line-height: 1.4;
     position: absolute;

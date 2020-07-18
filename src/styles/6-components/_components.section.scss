@@ -15,8 +15,8 @@
       .c-section__line { background-color: $color-grey; }
     } 
     &--red {
-      color: $color-red-faded;
-      .c-section__line { background-color: $color-red-faded; }
+      color: var(--color-faded);
+      .c-section__line { background-color: var(--color-faded); }
     }
     &--white {
       color: $color-grey-lightest;

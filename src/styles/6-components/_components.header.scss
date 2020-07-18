@@ -19,7 +19,7 @@
     background-color: $color-black;
     border-bottom: 1px solid $color-off-black;
 
-    .c-header__nav-link { color:$color-grey-lightest; }
+    .c-header__nav-link { color: $color-grey-lightest; }
     .c-header__logo-container { background-color: $color-grey-faded; }
   }
 
@@ -63,7 +63,7 @@
   }
 
   &__nav-link:after {
-    background: $gradient-red;
+    background: var(--gradient);
     content: "";
     height: 2px; width: 0;
     position: absolute;

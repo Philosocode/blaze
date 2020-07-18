@@ -12,6 +12,6 @@
     font-size: 2.6rem;
     transition: color $transition-append;
 
-    &:hover { color: $color-red-lighter; }
+    &:hover { color: var(--color-light); }
   }
 }

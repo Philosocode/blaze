@@ -72,7 +72,7 @@
   }
 
   &__block::before {
-    background: $color-red-dark;
+    background: var(--color-dark);
     content: '';
     position: absolute;
       top: 0;

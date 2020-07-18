@@ -2,6 +2,7 @@ import React from "react";
 import Image from "gatsby-image";
 import Tilt from 'react-parallax-tilt';
 import PropTypes from "prop-types";
+
 import BlockReveal from "../shared/block-reveal.component";
 
 const FeatureProject = ({ description, idx, imageFluid, technologies, title, url }) => (

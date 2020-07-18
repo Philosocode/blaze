@@ -4,7 +4,7 @@
     font-size: 5rem;
     transition: color $transition-append, transform $transition-append;
 
-    &:hover { color: $color-red; }
+    &:hover { color: var(--color); }
   }
 
   &__card { 
@@ -27,7 +27,7 @@
   }
 
   &__icon {
-    color: $color-red-faded;
+    color: var(--color-faded);
     font-size: 10rem;
     position: absolute;
       top: -3rem;
@@ -85,6 +85,7 @@
   li { margin: 0 0.25rem; }
 	
   button {
+    background-color: transparent;
     border: 1px solid $color-grey-lighter;
     border-radius: 100%;
     display: block;
@@ -100,6 +101,6 @@
 	
   li.slick-active button {
     border: 1px solid transparent;
-    background-color: $color-red;
+    background-color: var(--color-faded);
   }
 }

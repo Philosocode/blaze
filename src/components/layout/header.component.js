@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { throttle } from "../../shared/helpers.shared";
 
 import { HeaderContext } from "../../contexts/header.context";
+import { ThemeContext } from "../../contexts/theme.context";
 import { useMobileChecker } from "../../hooks/use-mobile-checker.hook";
 import BlazeLogo from "../../icons/blaze.svg";
 import NavMobile from "./nav-mobile.component";
@@ -11,6 +12,7 @@ import NavList from "./nav-list.component";
 
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
+  const { toggleBlaze } = useContext(ThemeContext);
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
@@ -50,9 +52,9 @@ const Header = () => {
 
   return (
     <header className={headerClasses}>
-      <Link to="#hero" className="c-header__logo-container" aria-label="Home">
-        <BlazeLogo className="c-header__logo" style={{ animationDelay: "1200ms" }} />
-      </Link>
+      <div className="c-header__logo-container" aria-label="Home">
+        <BlazeLogo onClick={toggleBlaze} className="c-header__logo" style={{ animationDelay: "1200ms" }} />
+      </div>
       {
         isMobile
           ? <NavMobile />

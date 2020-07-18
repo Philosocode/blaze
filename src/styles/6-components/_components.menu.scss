@@ -68,6 +68,6 @@
       animation: moveInLeft 0.5s ease-in-out both;
     }
 
-    &:hover { color: $color-red; }
+    &:hover { color: var(--color-light); }
   }
 }

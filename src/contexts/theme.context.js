@@ -11,6 +11,9 @@ export const ThemeProvider = ({ children }) => {
   const [isBlaze, setIsBlaze] = useState(true);
   
   function toggleBlaze() {
+    if (isBlaze) document.body.setAttribute("data-theme", "dark");
+    else document.body.removeAttribute("data-theme");
+
     setIsBlaze(!isBlaze);
   }
 

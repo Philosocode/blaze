@@ -86,8 +86,8 @@
   }
 
   &__window {
-    border: 0px solid;
-    border-image: linear-gradient(to top right, #E92B5A, #E17076);
+    border: 0px solid var(--color);
+    // border-image: var(--gradient-alt);
     border-image-slice: 1;
     position: absolute;
       top: 0;
