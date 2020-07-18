@@ -1,3 +1,4 @@
+// FROM: https://github.com/bchiang7/v4/blob/master/src/utils/index.js
 export const throttle = (func, wait = 100) => {
   let timer = null;
   return function(...args) {

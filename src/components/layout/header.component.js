@@ -48,6 +48,7 @@ const Header = () => {
   }, [throttledHandler]);
 
   function handleScroll() {
+    // FROM: https://github.com/bchiang7/v4/blob/master/src/components/nav.js
     const fromTop = window.scrollY;
     const DELTA = 5;
 
