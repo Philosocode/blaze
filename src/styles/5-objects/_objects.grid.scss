@@ -12,8 +12,13 @@
 }
 
 .o-grid__item {
+  grid-column: wide-start / wide-end;
+
   &--full { grid-column: full-start / full-end; }
   &--wide { grid-column: wide-start / wide-end;}
-  &--center { grid-column: center-start / center-end; }
-  &--narrow { grid-column: narrow-start / narrow-end; }
+
+  @include respond(tab-port) {
+    &--center { grid-column: center-start / center-end; }
+    &--narrow { grid-column: narrow-start / narrow-end; }
+  }
 }

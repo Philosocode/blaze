@@ -62,12 +62,14 @@ const Form = () => {
         name="name"
         type="text"
         onChange={handleChange}
+        placeholder="Your name"
         value={name}
       />
       <FormGroup
         name="email"
         type="email"
         onChange={handleChange}
+        placeholder="Your email"
         value={email}
       />
 

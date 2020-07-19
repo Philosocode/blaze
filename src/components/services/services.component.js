@@ -15,7 +15,7 @@ const Services = () => {
 
   return (
     <section className="o-grid o-section o-section--black" id="services">
-      <div className="o-grid__item--center">
+      <div className="o-grid__item--wide">
         <SectionHeader color="black">Services</SectionHeader>
         <div className="c-service__cards">
           {

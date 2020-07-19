@@ -35,8 +35,9 @@
 
   &__text {
     color: $color-grey-lighter;
-    font-size: $font-size-large;
+    font-family: $font-secondary;
     font-weight: 500;
+    font-size: $font-size-large;
     white-space: pre-line;
   }
 

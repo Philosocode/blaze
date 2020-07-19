@@ -6,9 +6,9 @@ import TestimonialCard from "./testimonial-card.component";
 import SectionHeader from "../shared/section-header.component";
 
 const Testimonials = () => {
-  const robertText = `"We feel absolutely blessed to have met Tam in the early stages of relaunching Politik™. He is a gifted, intuitive, reliable and responsive web designer and all-around terrific human being. Watch out for this one."`;
+  const robertText = `We feel absolutely blessed to have met Tam in the early stages of relaunching Politik™. He is a gifted, intuitive, reliable and responsive web designer and all-around terrific human being. Watch out for this one.`;
 
-  const darronText = `"Tam did a fantastic job designing our company website. He was very professional, skilled, and easy to work with. We highly recommend him if you're looking for any development or design services!"`;
+  const darronText = `Tam did a fantastic job designing our company website. He was very professional, skilled, and easy to work with. We highly recommend him if you're looking for any development or design services!`;
 
   const sliderOptions = {
     centerMode: true,

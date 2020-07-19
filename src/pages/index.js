@@ -18,20 +18,19 @@ const IndexPage = () => {
       once: true
     });
     AOS.refresh();
-    // window.scrollTo(0, 0);
   }, []);
 
   return (
     <Layout>
       <SEO title="Home" />
       <Hero />
-      <About />
+      {/* <About />
       <Services />
       <Process />
       <Feature />
       <Projects />
       <Testimonials />
-      <Contact />
+      <Contact /> */}
     </Layout>
   );
  };

@@ -33,14 +33,14 @@ const Hero = () => {
         <div className="o-grid__item--full c-hero__particles" style={{ animationDelay: `${delays[4] + 100}ms` }}>
           <ParticlesBackground />
         </div>
-        <div className="o-grid__item--center c-hero__text">
+        <div className="o-grid__item o-grid__item--center c-hero__text">
           <h1
             className="c-hero__title"
             style={{ animationDelay: `${delays[0]}ms` }}
           >Tam Le</h1>
-          <h2 className="c-hero__subtitle" style={{ animationDelay: `${delays[1]}ms` }}>Developer, Designer, Teacher</h2>
+          <h2 className="c-hero__subtitle" style={{ animationDelay: `${delays[1]}ms` }}>Web Designer & Full-Stack Developer</h2>
           <p className="c-body-text c-hero__description" style={{ animationDelay: `${delays[2]}ms` }}>{
-            "You have an idea. A vision for a product. I can help you build it.\nLet's work together and make it a reality."
+            "You have an idea. A vision for a product.\nI can help you build it.\nLet's work together and make it a reality."
           }</p>
           <Waypoint
             onEnter={setTransparentHeader}
