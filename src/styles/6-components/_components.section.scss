@@ -7,12 +7,12 @@
     position: relative;
 
     &--black {
-      color: $color-off-black;
-      .c-section__line { background-color: $color-off-black; }
+      color: $color-grey-darkest;
+      .c-section__line { background-color: $color-grey-darkest; }
     } 
     &--grey {
-      color: $color-grey-faded;
-      .c-section__line { background-color: $color-grey-faded; }
+      color: $color-grey-darker;
+      .c-section__line { background-color: $color-grey-darker; }
     } 
     &--red {
       color: var(--color-faded);
