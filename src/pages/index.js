@@ -24,8 +24,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Hero />
-      {/* <About />
-      <Services />
+      <About />
+      {/* <Services />
       <Process />
       <Feature />
       <Projects />

@@ -9,12 +9,14 @@ const AboutCardLeft = () => {
   Currently, I'm working towards a BS. Computer Science with a minor in Mathematics.`;
 
   return (
-    <BlockReveal color="black" direction="right">
       <div className="c-about__card c-about__card--left">
-        <h2>Hello!</h2>
-        <p className="c-body-text c-body-text--small c-body-text--light">{description}</p>
+        <BlockReveal color="black" direction="right">
+        <div className="c-about__left-content">
+          <h2>Hello!</h2>
+          <p className="c-body-text c-body-text--small c-body-text--light">{description}</p>
+        </div>
+        </BlockReveal>
       </div>
-    </BlockReveal>
   )
 };
 

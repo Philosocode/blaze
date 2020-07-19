@@ -1,9 +1,17 @@
 .c-body-text {
   font-family: $font-secondary;
-  font-size: $font-size-medium;
+  font-size: $font-size-normal;
   white-space: pre-line;
 
+  @include respond(tab-port) { font-size: $font-size-normal-big; }
+  @include respond(tab-land) { font-size: $font-size-medium; }
+
   &--centered { text-align: center; }
-  &--small { font-size: $font-size-normal-big; }
+  &--small {
+    font-size: $font-size-small;
+
+    @include respond(tab-port) { font-size: $font-size-normal; }
+    @include respond(tab-land) { font-size: $font-size-normal-big; }
+  }
   &--light { color: $color-grey-lightest; }
 }
