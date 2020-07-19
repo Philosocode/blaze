@@ -26,20 +26,33 @@
 
   &__heading {
     color: inherit;
-    font-size: 15rem;
+    font-size: $font-size-mega;
     min-width: max-content;
 
-    &--small {
-      font-size: 5rem;
-    }
+    @include respond(tab-port) { font-size: $font-size-title-large; }
+    @include respond(tab-land) { font-size: $font-size-title-larger; }
+    @include respond(desktop) { font-size: $font-size-title-largest; }
   }
 
   &__line {
+    @include respond(phone-only) { display: none; }
+
     background-color: inherit;
     height: 3px;
     width: 100%;
 
-    &--left { margin-right: $spacing-larger; }
-    &--right { margin-left: $spacing-larger; }
+    &--left {
+      margin-right: $spacing-medium;
+
+      @include respond(tab-land) { margin-right: $spacing-large; }
+      @include respond(desktop) { margin-right: $spacing-larger; }
+    }
+
+    &--right {
+      margin-left: $spacing-small;
+
+      @include respond(tab-land) { margin-left: $spacing-large; }
+      @include respond(desktop) { margin-left: $spacing-larger; }
+    }
   }
 }

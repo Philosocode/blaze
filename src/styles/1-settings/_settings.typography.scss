@@ -20,3 +20,7 @@ $font-size-large: calc(#{$font-size-medium} * #{$multiplier});
 $font-size-larger: calc(#{$font-size-large} * #{$multiplier});
 $font-size-largest: calc(#{$font-size-larger} * #{$multiplier});
 $font-size-mega: calc(#{$font-size-largest} * #{$multiplier});
+
+$font-size-title-large: calc(#{$font-size-mega} * #{$multiplier});
+$font-size-title-larger: calc(#{$font-size-title-large} * #{$multiplier});
+$font-size-title-largest: calc(#{$font-size-title-larger} * #{$multiplier});
