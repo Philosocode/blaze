@@ -57,7 +57,7 @@ const Feature = () => {
   return (
     <section className="o-grid o-section o-section--dark" id="featured">
       <div className="o-grid__item--wide">
-        <SectionHeader color="white">Featured</SectionHeader>
+        <SectionHeader color="red">Featured</SectionHeader>
       </div>
       <div className="o-grid__item--wide">
         <div className="c-feature__projects">

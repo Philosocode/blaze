@@ -1,7 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import classNames from "classnames";
-import { throttle } from "../../shared/helpers.shared";
 
+import { throttle } from "../../shared/helpers.shared";
+import { ANIMATION_DELAY, navLinks } from "../../shared/data.shared";
 import { HeaderContext } from "../../contexts/header.context";
 import { ThemeContext } from "../../contexts/theme.context";
 import { useMobileChecker } from "../../hooks/use-mobile-checker.hook";
@@ -10,11 +11,10 @@ import ZephyrLogo from "../../icons/zephyr.svg";
 import NavMobile from "./nav-mobile.component";
 import NavList from "./nav-list.component";
 import ScrollLock from "react-scrolllock";
-import { ANIMATION_DELAY, navLinks } from "../../shared/data.shared";
 
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
-  const { isBlaze, toggleBlaze } = useContext(ThemeContext);
+  const { isBlaze, toggleTheme } = useContext(ThemeContext);
   const [pageAnimating, setPageAnimating] = useState(false);
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -31,7 +31,7 @@ const Header = () => {
   });
 
   const logoAttributes = {
-    onClick: toggleTheme,
+    onClick: handleClick,
     style: { animationDelay: `${animationDelay}ms` }
   };
 
@@ -68,10 +68,10 @@ const Header = () => {
     setLastScrollTop(fromTop);
   };
 
-  function toggleTheme() {
+  function handleClick() {
     setPageAnimating(true);
-    setTimeout(() => toggleBlaze(), 500);
-    setTimeout(() => setPageAnimating(false), 1700);
+    setTimeout(() => toggleTheme(), 500);
+    setTimeout(() => setPageAnimating(false), 2500);
   }
 
   return (

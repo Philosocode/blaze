@@ -4,18 +4,19 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
 import Header from "./header.component";
 import Footer from "./footer.component";
 import Loader from "../shared/loader.component";
+import { ThemeContext } from "../../contexts/theme.context";
 
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const { isBlaze } = useContext(ThemeContext);
 
-  // if (isLoading) return <Loader finishLoading={() => setIsLoading(false)} />
+  return <Loader isZephyr={!isBlaze} finishLoading={() => setIsLoading(false)} />
 
   return (
     <>

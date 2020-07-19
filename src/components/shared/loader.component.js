@@ -3,9 +3,10 @@ import anime from "animejs";
 import PropTypes from "prop-types";
 
 import BlazeLogo from "../../icons/blaze.svg";
+import ZephyrLogo from "../../icons/zephyr.svg";
 
 // FROM: https://github.com/bchiang7/v4/blob/master/src/components/loader.js
-const Loader = ({ finishLoading }) => {
+const Loader = ({ isZephyr, finishLoading }) => {
   useEffect(() => {
     animate();
   }, []);
@@ -18,7 +19,11 @@ const Loader = ({ finishLoading }) => {
     loader
       .add({
         targets: ".c-loader__circle",
-        delay: 300,
+        opacity: 1,
+        duration: 0
+      })
+      .add({
+        targets: ".c-loader__circle",
         duration: 1500,
         easing: "easeInOutQuart",
         strokeDashoffset: [anime.setDashoffset, 0],
@@ -41,9 +46,8 @@ const Loader = ({ finishLoading }) => {
         targets: ".c-loader__background",
         duration: 200,
         easing: "easeInOutQuart",
-        opacity: 0,
-        zIndex: -1,
-      });
+        opacity: 0
+      })
   }
 
   return (
@@ -52,7 +56,11 @@ const Loader = ({ finishLoading }) => {
         <svg width="168" height="168" className="c-loader__svg">
           <circle cx="82" cy="82" r="60" className="c-loader__circle"></circle>
         </svg>
-        <BlazeLogo className="c-loader__icon" />
+        {
+          isZephyr
+            ? <ZephyrLogo className="c-loader__icon" />
+            : <BlazeLogo className="c-loader__icon" />
+        }
       </div>
     </div>
   );
