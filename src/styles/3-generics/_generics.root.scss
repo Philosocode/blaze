@@ -1,19 +1,4 @@
 :root {
-  --color-darker: #{$color-green-darker};
-  --color-dark: #{$color-green-dark};
-  --color: #{$color-green};
-  --color-rgb: 0, 178, 125;
-  --color-light: #{$color-green-light};
-  --color-lighter: #{$color-green-lighter};
-  --color-lighter-rgb: 51, 229, 176;
-  --color-lightest: #{$color-green-lightest};
-  --color-faded: #{$color-green-faded};
-  --gradient: #{$gradient-green};
-  --gradient-alt: #{$gradient-green-alt};
-  --gradient-window: #{$gradient-green-window};
-}
-
-[data-theme="blaze"] {
   --color-darker: #{$color-red-darker};
   --color-dark: #{$color-red-dark};
   --color: #{$color-red};
@@ -26,4 +11,19 @@
   --gradient: #{$gradient-red};
   --gradient-alt: #{$gradient-red-alt};
   --gradient-window: #{$gradient-red-window};
+}
+
+[data-theme="zephyr"] {
+  --color-darker: #{$color-green-darker};
+  --color-dark: #{$color-green-dark};
+  --color: #{$color-green};
+  --color-rgb: 0, 178, 125;
+  --color-light: #{$color-green-light};
+  --color-lighter: #{$color-green-lighter};
+  --color-lighter-rgb: 51, 229, 176;
+  --color-lightest: #{$color-green-lightest};
+  --color-faded: #{$color-green-faded};
+  --gradient: #{$gradient-green};
+  --gradient-alt: #{$gradient-green-alt};
+  --gradient-window: #{$gradient-green-window};
 }

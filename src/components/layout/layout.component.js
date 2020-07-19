@@ -16,14 +16,14 @@ import ZephyrLogo from "../../icons/zephyr.svg";
 
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const { isZephyr } = useContext(ThemeContext);
+  const { isBlaze } = useContext(ThemeContext);
 
   // Wait for localStorage fetch
-  while (isZephyr === undefined) return null;
+  while (isBlaze === undefined) return null;
 
-  const Logo = isZephyr
-    ? <ZephyrLogo className="c-loader__icon c-loader__icon--zephyr" />
-    : <BlazeLogo className="c-loader__icon" />
+  const Logo = isBlaze
+    ? <BlazeLogo className="c-loader__icon" />
+    : <ZephyrLogo className="c-loader__icon c-loader__icon--zephyr" />
 
 
   if (isLoading) return <Loader Logo={Logo} finishLoading={() => setIsLoading(false)} />

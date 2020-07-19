@@ -4,10 +4,10 @@ import Particles from "react-tsparticles";
 import { ThemeContext } from "../../contexts/theme.context";
 
 const ParticlesBackground = () => { 
-  const { isZephyr } = useContext(ThemeContext);
-  const colors = isZephyr
-    ? ["#00B27D", "#99FFFF"]
-    : ['#eb5757', "#FFA4A4"];
+  const { isBlaze } = useContext(ThemeContext);
+  const colors = isBlaze
+    ? ['#eb5757', "#FFA4A4"]
+    : ["#00B27D", "#99FFFF"]
 
   const particlesConfig = {
     particles: {

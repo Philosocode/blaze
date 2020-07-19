@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 
 // Context
 export const ThemeContext = createContext({
-  isZephyr: false,
+  isBlaze: false,
   setBlaze: () => {},
   setZephyr: () => {},
   toggleTheme: () => {}
@@ -12,36 +12,36 @@ export const ThemeContext = createContext({
 export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     if (localStorage.getItem("theme") !== null) {
-      document.body.setAttribute("data-theme", "blaze");
-      setisZephyr(false);
+      document.body.setAttribute("data-theme", "zephyr");
+      setisBlaze(false);
     }
     else {
-      setisZephyr(true);
+      setisBlaze(true);
     }
   }, []);
 
-  const [isZephyr, setisZephyr] = useState(undefined);
+  const [isBlaze, setisBlaze] = useState(undefined);
 
   function setZephyr() {
-    document.body.setAttribute("data-theme", "blaze");
-    localStorage.setItem("theme", "blaze");
-    setisZephyr(false);
+    document.body.setAttribute("data-theme", "zephyr");
+    localStorage.setItem("theme", "zephyr");
+    setisBlaze(false);
   }
 
   function setBlaze() {
     document.body.removeAttribute("data-theme");
     localStorage.removeItem("theme");
-    setisZephyr(true);
+    setisBlaze(true);
   }
   
   function toggleTheme() {
-    if (isZephyr) setZephyr()
+    if (isBlaze) setZephyr()
     else setBlaze();
   }
 
   return (
     <ThemeContext.Provider
-      value={{ isZephyr, setBlaze, setZephyr, toggleTheme }}
+      value={{ isBlaze, setBlaze, setZephyr, toggleTheme }}
     >
       {children}
     </ThemeContext.Provider>
