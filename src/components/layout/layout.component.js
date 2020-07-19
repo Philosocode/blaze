@@ -4,19 +4,29 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 
 import Header from "./header.component";
 import Footer from "./footer.component";
 import Loader from "../shared/loader.component";
 import { ThemeContext } from "../../contexts/theme.context";
+import BlazeLogo from "../../icons/blaze.svg";
+import ZephyrLogo from "../../icons/zephyr.svg";
 
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const { isBlaze } = useContext(ThemeContext);
+  const { isZephyr } = useContext(ThemeContext);
 
-  return <Loader isZephyr={!isBlaze} finishLoading={() => setIsLoading(false)} />
+  // Wait for localStorage fetch
+  while (isZephyr === undefined) return null;
+
+  const Logo = isZephyr
+    ? <ZephyrLogo className="c-loader__icon c-loader__icon--zephyr" />
+    : <BlazeLogo className="c-loader__icon" />
+
+
+  if (isLoading) return <Loader Logo={Logo} finishLoading={() => setIsLoading(false)} />
 
   return (
     <>

@@ -14,7 +14,7 @@ import ScrollLock from "react-scrolllock";
 
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
-  const { isBlaze, toggleTheme } = useContext(ThemeContext);
+  const { isZephyr, toggleTheme } = useContext(ThemeContext);
   const [pageAnimating, setPageAnimating] = useState(false);
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -80,9 +80,9 @@ const Header = () => {
         <div className="c-header__logo-container" aria-label="Logo">
           <div className="c-header__logo-background"></div>
           {
-            isBlaze 
-              ? <BlazeLogo className="c-header__logo" {...logoAttributes} />
-              : <ZephyrLogo className="c-header__logo is-zephyr" {...logoAttributes} />
+            isZephyr 
+              ? <ZephyrLogo className="c-header__logo is-zephyr" {...logoAttributes} />
+              : <BlazeLogo className="c-header__logo" {...logoAttributes} />
           }
         </div>
         {

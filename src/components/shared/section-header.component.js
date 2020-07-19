@@ -27,7 +27,7 @@ const SectionHeader = ({ alignment, color, children }) => {
  };
 
 SectionHeader.propTypes = {
-  color: PropTypes.oneOf(["red", "black"]),
+  color: PropTypes.oneOf(["red", "black", "grey", "white"]),
   alignment: PropTypes.oneOf(["left", "right"]),
 }
 

@@ -2,13 +2,11 @@ import React, { useEffect } from "react";
 import anime from "animejs";
 import PropTypes from "prop-types";
 
-import BlazeLogo from "../../icons/blaze.svg";
-import ZephyrLogo from "../../icons/zephyr.svg";
-
 // FROM: https://github.com/bchiang7/v4/blob/master/src/components/loader.js
-const Loader = ({ isZephyr, finishLoading }) => {
+const Loader = ({ Logo, finishLoading }) => {
   useEffect(() => {
     animate();
+    // eslint-disable-next-line
   }, []);
 
   function animate() {
@@ -56,11 +54,7 @@ const Loader = ({ isZephyr, finishLoading }) => {
         <svg width="168" height="168" className="c-loader__svg">
           <circle cx="82" cy="82" r="60" className="c-loader__circle"></circle>
         </svg>
-        {
-          isZephyr
-            ? <ZephyrLogo className="c-loader__icon" />
-            : <BlazeLogo className="c-loader__icon" />
-        }
+        { Logo }
       </div>
     </div>
   );

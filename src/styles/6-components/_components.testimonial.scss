@@ -94,7 +94,7 @@
     text-indent: -9999px;
     transition: background $transition-append;
 
-    &:hover { cursor: pointer; }
+    &:hover { background-color: $color-grey-darkest; cursor: pointer; }
     &:focus, &:active { outline: none; }
   }
 	
@@ -102,4 +102,8 @@
     border: 2px solid transparent;
     background-color: var(--color-faded);
   }
+}
+
+.slick-track {
+  cursor: default;
 }
