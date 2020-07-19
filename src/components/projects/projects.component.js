@@ -31,24 +31,22 @@ const Projects = () => {
 
   return (
     <section className="o-grid o-section o-section--dark" id="projects">
-      <div className="o-grid__item--center">
+      <div className="o-grid__item o-grid__item--center">
         <SectionHeader color="grey" alignment="left">Projects</SectionHeader>
       </div>
-      <div className="o-grid__item--wide">
-        <div className="c-project__grid">
-          {
-            projectsData.map(({ description, imageFluid, title, url }, idx) => (
-              <ProjectBox
-                key={title}
-                description={description}
-                idx={idx}
-                imageFluid={imageFluid}
-                title={title}
-                url={url}
-              />
-            ))
-          }
-        </div>
+      <div className="c-project__grid">
+        {
+          projectsData.map(({ description, imageFluid, title, url }, idx) => (
+            <ProjectBox
+              key={title}
+              description={description}
+              idx={idx}
+              imageFluid={imageFluid}
+              title={title}
+              url={url}
+            />
+          ))
+        }
       </div>
     </section>
   );

@@ -1,9 +1,16 @@
 .c-project {
   &__grid {
     display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    grid-column: full-start / full-end;
+
+    @include respond(tab-land) {
+      flex-direction: row;
       justify-content: center;
-    margin-top: $spacing-large;
+      flex-wrap: wrap;
+      grid-column: wide-start / wide-end;
+    }
   }
 
   &__container {
@@ -14,12 +21,21 @@
     color: $color-off-white;
     display: flex;
       align-items: center;
+    height: 25rem;
+    margin-top: $spacing-medium;
     overflow: hidden;
-    margin: auto $spacing-large;
     position: relative;
     text-align: center;
-    height: 30rem;
-    width: 40rem;
+
+    @include respond(tab-port) {
+      height: 30rem;
+      width: 40rem;
+    }
+
+    @include respond(tab-land) {
+      margin-left: $spacing-large;
+      margin-right: $spacing-large;
+    }
 
     &:hover {
       .c-project__image {
