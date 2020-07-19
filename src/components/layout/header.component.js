@@ -18,7 +18,7 @@ const Header = () => {
   const [pageAnimating, setPageAnimating] = useState(false);
   const isMobile = useMobileChecker();
   const [scrollDirection, setScrollDirection] = useState("up");
-  const [lastScrollTop, setLastScrollTop] = useState(window.scrollY);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   const animationDelay = isMobile
     ? (ANIMATION_DELAY + 50)
