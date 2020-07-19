@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
     : <ZephyrLogo className="c-loader__icon c-loader__icon--zephyr" />
 
 
-  if (isLoading) return <Loader Logo={Logo} finishLoading={() => setIsLoading(false)} />
+  // if (isLoading) return <Loader Logo={Logo} finishLoading={() => setIsLoading(false)} />
 
   return (
     <>

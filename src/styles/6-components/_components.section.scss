@@ -3,8 +3,10 @@
     display: flex;
       align-items: center;
       justify-content: center;
-    margin-bottom: $spacing-large;
+    margin-bottom: $spacing-medium;
     position: relative;
+
+    @include respond(tab-land) { margin-bottom: $spacing-large; }
 
     &--black {
       color: $color-grey-darkest;
@@ -26,7 +28,7 @@
 
   &__heading {
     color: inherit;
-    font-size: $font-size-mega;
+    font-size: $font-size-largest;
     min-width: max-content;
 
     @include respond(tab-port) { font-size: $font-size-title-large; }

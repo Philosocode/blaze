@@ -26,20 +26,37 @@ const Process = () => {
   }
 
   function getProcessCards() {
-    const description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis molestiae, corrupti facere aliquam placeat velit illo, excepturi quae consectetur reiciendis recusandae sint a similique mollitia officiis minima. Incidunt, tempora harum";
     const cardsData = [
-      { title: "Initial Prep", icon: FaPlay },
-      { title: "Brief Chat", icon: FaComments },
-      { title: "Wireframes", icon: FaTh },
-      { title: "Design", icon: FaMagic },
-      { title: "Code", icon: FaCode },
-      { title: "Launch", icon: FaRocket },
+      {
+        title: "Initial Prep", icon: FaPlay,
+        description: "We'll start by creating a document listing the scope and deliverables for the site. This will help me understand what you're looking for and allow me to tailor my services to suit your needs."
+      },
+      {
+        title: "Brief Chat", icon: FaComments,
+        description: "Once the brief is created, we'll have a quick call to introduce ourselves. We'll go over the brief and make sure we're on the same page about what needs to be done by when."
+      },
+      {
+        title: "Wireframes", icon: FaTh,
+        description: "After we've agreed on deliverables and deadlines, it's time to start working on the site. We'll create wireframes containing the general layout and functionality of the site."
+      },
+      {
+        title: "Design", icon: FaMagic,
+        description: "The next step is to apply a little design magic to bring the wireframes to life. We'll add colour, images, and typography to create a visual mockup of the site."
+      },
+      {
+        title: "Code", icon: FaCode,
+        description: `With the visuals done, it's time to start programming. I'll transform the mockup into a website that you can interact with.`
+      },
+      {
+        title: "Launch", icon: FaRocket,
+        description: "When the site is fully created, there's only one thing left to do: launch it! Sit back and relax as I handle all the details. I'll also teach you how to use your new site."
+      },
     ];
 
     return cardsData.map((data, idx) => (
       <ProcessCard
         key={data.title}
-        description={description}
+        description={data.description}
         FaIcon={data.icon}
         isRight={idx % 2 !== 0}
         stepNum={idx + 1}
@@ -55,7 +72,7 @@ const Process = () => {
       <div className="o-grid__item--wide">
         <SectionHeader color="red" alignment="left">Process</SectionHeader>
       </div>
-      <div className="o-grid__item--center c-process__content">
+      <div className="c-process__content">
         <WhyIcons />
         
         <div className="c-process__tabs" data-aos="fade-up" data-aos-offset={300}>

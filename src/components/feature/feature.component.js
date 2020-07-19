@@ -34,16 +34,16 @@ const Feature = () => {
     {
       title: "Darron Ta: Stunt Portfolio",
       imageFluid: darronTa.childImageSharp.fluid,
-      description: "Website for martial artist and stunt actor.",
+      description: "Portfolio site for martial artist and stunt actor.",
       url: "https://darronta.com",
       technologies: ["React", "Gatsby"]
     },
     {
       title: "Politik™",
       imageFluid: politik.childImageSharp.fluid,
-      description: "Website for a social impact agency.",
+      description: "Website for Politik™, a social organization.",
       url: "https://politik.ca",
-      technologies: ["SCSS", "WordPress"]
+      technologies: ["HTML", "SCSS", "WordPress"]
     },
     {
       title: "Zephyr",
@@ -59,23 +59,21 @@ const Feature = () => {
       <div className="o-grid__item--wide">
         <SectionHeader color="red">Featured</SectionHeader>
       </div>
-      <div className="o-grid__item--wide">
-        <div className="c-feature__projects">
-          {
-            projectsData.map(({ description, imageFluid, url, technologies, title }, idx) => (
-              <FeatureProject
-                key={title}
-                idx={idx}
-                description={description}
-                imageFluid={imageFluid}
-                url={url}
-                technologies={technologies}
-                title={title}
-              />
-            ))
-          }
-        </div>
-      </div> 
+      <div className="c-feature__projects">
+        {
+          projectsData.map(({ description, imageFluid, url, technologies, title }, idx) => (
+            <FeatureProject
+              key={title}
+              idx={idx}
+              description={description}
+              imageFluid={imageFluid}
+              url={url}
+              technologies={technologies}
+              title={title}
+            />
+          ))
+        }
+      </div>
     </section>
   );
  };

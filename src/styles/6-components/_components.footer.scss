@@ -7,8 +7,8 @@
     justify-content: space-between;
 
   &__copyright {
-    color: $color-grey;
-    font-weight: 500;
+    color: $color-grey-dark;
+    font-family: $font-secondary;
   }
 
   &__list {

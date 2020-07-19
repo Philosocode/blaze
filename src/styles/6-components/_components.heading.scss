@@ -4,10 +4,13 @@
 
   // General Styles
   &--condensed {
-    font-size: $font-size-small;
+    font-size: $font-size-smallest;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+
+    @include respond(tab-port) { font-size: $font-size-smaller; }
+    @include respond(tab-land) { font-size: $font-size-small; }
   }
 
   &--section {

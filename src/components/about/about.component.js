@@ -7,15 +7,13 @@ import SectionHeader from "../shared/section-header.component";
 const About = () => {
   return (
     <section className="o-grid o-section o-section--black" id="about">
-    <div className="o-grid__item--center">
+    <div className="o-grid__item--wide">
       <SectionHeader color="black">About</SectionHeader>
-    </div>
-      <div className="o-grid__item--wide">
-        <div className="c-about__cards">
-          <AboutCardLeft/>
-          <AboutCardRight />
-        </div>
+      <div className="c-about__cards">
+        <AboutCardLeft/>
+        <AboutCardRight />
       </div>
+    </div>
     </section>
   );
 };
