@@ -46,6 +46,24 @@
     @include respond(tab-port) { font-size: $font-size-normal-big; }
     
     &:focus { outline: none; }
+
+    // Expand border on focus or if touched + invalid
+    &:focus + .c-form__border,
+    &.is-touched:invalid + .c-form__border {
+      transform: scale(1);
+    }
+
+    // Red border for invalid input
+    &.is-touched:invalid + .c-form__border {
+      background-color: $color-red;
+      background: $gradient-red;
+    }
+
+    // Show label above input on focus
+    &:focus ~ .c-form__label  {
+      opacity: 1;
+      transform: translateY(0);
+    }
     
     &::-webkit-input-placeholder {
       color: $color-grey-dark;
@@ -63,23 +81,6 @@
 
     &:focus::-webkit-input-placeholder { opacity: 0;}
     &:focus::-moz-placeholder { opacity: 0; }
-  }
-
-  // Expand border on focus or if touched + invalid
-  &__input:focus + &__border,
-  &__input.is-touched:invalid + &__border {
-    transform: scale(1);
-  }
-
-  &__input.is-touched:invalid + &__border {
-    background-color: $color-red;
-    background: $gradient-red;
-  }
-
-  // Show label above input on focus
-  &__input:focus ~ &__label  {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   &__border {

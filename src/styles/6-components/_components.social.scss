@@ -9,8 +9,10 @@
   &__link {
     color: $color-grey-lighter;
     list-style-type: none;
-    font-size: 2.6rem;
+    font-size: 2rem;
     transition: color $transition-append;
+
+    @include respond(tab-port) { font-size: 2.6rem; }
 
     &:hover { color: var(--color-light); }
   }

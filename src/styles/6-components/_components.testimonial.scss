@@ -1,8 +1,10 @@
 .c-testimonial {
   &__arrow {
     color: $color-grey-darker;
-    font-size: 5rem;
     transition: color $transition-append, transform $transition-append;
+    font-size: 5rem;
+
+    @include respond(tab-land) { font-size: 5rem; }
 
     &:hover { color: var(--color); }
   }
@@ -13,67 +15,100 @@
     display: flex;
       flex-direction: column;
       justify-content: center;
-    margin: $spacing-large auto;
-    padding: $spacing-larger;
+    margin: $spacing-medium auto;
+    padding: $spacing-medium;
     position: relative;
-    width: 80%; max-width: 100rem;
+    width: 100%; max-width: 100rem;
+
+    @include respond(tab-port) { width: 80%; }
+    @include respond(tab-land) {
+      margin: $spacing-large auto;
+      padding: $spacing-larger;
+    }
   }
 
   &__content {
     cursor: pointer;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
   }
 
   &__icon {
     color: var(--color-faded);
-    font-size: 10rem;
+    font-size: 4rem;
     position: absolute;
+      top: -2rem;
+      left: -2rem;
+
+    @include respond(tab-land) {
+      font-size: 10rem;
       top: -3rem;
       left: -3rem;
+    }
   }
 
   &__text {
     color: $color-grey-lighter;
     font-family: $font-secondary;
+    font-size: $font-size-normal;
     font-weight: 500;
-    font-size: $font-size-large;
     white-space: pre-line;
+
+    @include respond(tab-land) { font-size: $font-size-large; }
   }
 
   &__person {
     color: $color-grey-lighter;
     font-weight: bold;
-    font-size: $font-size-medium;
+    font-size: $font-size-small;
     margin-top: $spacing-large;
+
+    @include respond(tab-land) { font-size: $font-size-medium; }
   }
 
   &__position {
-    color: $color-grey-lighter;
-    font-size: $font-size-normal;
+    color: $color-grey;
+    font-size: $font-size-smallest;
+    
+    @include respond(tab-land) { font-size: $font-size-small; }
   }
 }
 
-.slick-arrow {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;  
-    top: 50%;
-    transform: translateY(-50%);
-  z-index: 10;
+.slick {
+  &-arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;  
+      top: 50%;
+      transform: translateY(-50%);
+    z-index: 10;
+  
+    &:focus, &:active { outline: none; }
+  }
 
-  &:focus, &:active { outline: none; }
+  &-disabled {
+    opacity: 0;
+    transition: opacity $transition-append;
+  }
+
+  &-list {
+    padding: 0 !important;
+  }
+
+  &-next {
+    right: 0%;
+  }
+
+  &-track {
+    cursor: default;
+  }
+
+  &-slide &-current {
+    opacity: 0;
+  }
 }
 
-.slick-next {
-  right: 0%;
-}
-
-.slick-disabled {
-  opacity: 0;
-  transition: opacity $transition-append;
-}
 
 .slick-dots {
 	display: flex !important;
@@ -103,8 +138,4 @@
     border: 2px solid transparent;
     background-color: var(--color-faded);
   }
-}
-
-.slick-track {
-  cursor: default;
 }
