@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Tam Le | Full-Stack Developer & Web Designer`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tam Le | Full-Stack Developer`,
+    description: `I'm Tam, a full-stack developer based in Alberta, Canada with a passion for design, development, and teaching.`,
+    siteUrl: "https://tamxle.com",
+    keywords: "Tam Le, Tam, Le, philosocode, web developer, full-stack developer, software engineer, javascript, react, nodejs",
+    author: "@Philosocode"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +28,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `lato\:400,700`,
+          `noto sans\:400,700`,
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -35,6 +47,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-173067610-1",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
