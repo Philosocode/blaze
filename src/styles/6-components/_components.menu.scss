@@ -53,6 +53,7 @@
     margin-bottom: $spacing-small;
     text-transform: uppercase;
     list-style-type: none;
+    width: max-content;
 
     &:last-of-type { margin-bottom: 0; }
   }
@@ -68,7 +69,6 @@
 
   &__link {
     color: $color-grey-lightest;
-    display: block;
     position: relative;
     text-decoration: none;
     transition: transform $transition-append;
