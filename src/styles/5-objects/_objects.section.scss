@@ -1,6 +1,16 @@
 .o-section {
-  padding-top: $spacing-section;
-  padding-bottom: $spacing-section;
+  padding-top: 11rem;
+  padding-bottom: 11rem;
+
+  @include respond(tab-port) {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+  }
+
+  @include respond(tab-land) {
+    padding-top: 22rem;
+    padding-bottom: 22rem;
+  }
 
   &--white { background-color: $color-grey-lightest; }
   &--black { background-color: $color-black; }

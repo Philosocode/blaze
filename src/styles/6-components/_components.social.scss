@@ -4,6 +4,9 @@
       align-items: center;
       justify-content: center;
     list-style-type: none;
+
+    &--start { justify-content: flex-start; }
+    &.is-animated { animation: moveInBottom 0.5s ease-in-out both; }
   }
 
   &__link {

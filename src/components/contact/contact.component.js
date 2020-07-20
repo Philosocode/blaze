@@ -14,7 +14,7 @@ const Contact = () => {
         </p>
       </div>
       <div className="c-contact__form">
-        <div {...aosHeadingAttributes} data-aos="fade-right" />
+        <div {...aosHeadingAttributes} data-aos="fade-up" />
         <Form />
       </div>
     </section>

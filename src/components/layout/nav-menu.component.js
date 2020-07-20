@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 
 import { navLinks } from "../../shared/data.shared";
 import NavMobile from "./nav-mobile.component";
+import SocialIcons from "../shared/social-icons.component";
 
 export const NavMenu = ({ menuOpen, toggleMenu }) => {
   const menuBackgroundClasses = classNames({ 
@@ -20,6 +21,11 @@ export const NavMenu = ({ menuOpen, toggleMenu }) => {
 
   const menuLinkClasses = classNames({
     "c-menu__link": true,
+    "is-animated": menuOpen
+  });
+
+  const dividerClasses = classNames({
+    "c-menu__divider": true,
     "is-animated": menuOpen
   });
 
@@ -39,6 +45,8 @@ export const NavMenu = ({ menuOpen, toggleMenu }) => {
               </li>
             ))
           }
+          <div className={dividerClasses} style={{ animationDelay: "1200ms" }}></div>
+          <SocialIcons animated={menuOpen} alignStart linkClass="c-menu__icon" />
         </ul>
       </nav>
       <ScrollLock isActive={menuOpen} />

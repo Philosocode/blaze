@@ -11,7 +11,7 @@ export const useMobileChecker = () => {
   }, []);
 
   function updateIsMobile() {
-    const isMobile = !(window.innerWidth > 600);
+    const isMobile = !(window.innerWidth > 650);
     setIsMobile(isMobile);
   }
 

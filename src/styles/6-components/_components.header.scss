@@ -4,8 +4,7 @@
   display: flex;
     align-items: center;
     justify-content: space-between;
-  height: $header-height;
-  padding: 4rem $side-gap;
+  padding: 1rem $side-gap;
   position: fixed;
   transition: background-color $transition-append, transform $transition-append;
   width: 100%;
@@ -32,10 +31,14 @@
     display: flex;
       align-items: center;
       justify-content: center;
-    height: 6rem; width: 6rem;
+    height: 4rem; width: 4rem;
     overflow: hidden;
     position: relative;
     z-index: 2000;
+
+    @include respond(tab-port) {
+      height: 6rem; width: 6rem;
+    }
   }
 
   &__logo-container:hover &__logo-background {
@@ -57,17 +60,25 @@
     cursor: pointer;
     display: block;
     transition: transform 0.5s ease-in-out;
-    width: 3rem;
+    width: 2rem;
     z-index: 2;
 
-    &.is-zephyr { width: 5rem; }
+    @include respond(tab-port) { width: 3rem; }
+
+    &.is-zephyr {
+      width: 3.5rem;
+      
+      @include respond(tab-port) { width: 5rem; }
+    }
   }
 
   &__nav-item {
     animation: $animation;
     display: inline-block;
     list-style-type: none;
-    margin-right: $spacing-medium;
+    margin-right: $spacing-small;
+    
+    @include respond(tab-land) { margin-right: $spacing-medium; }
   }
 
   &__nav-link {

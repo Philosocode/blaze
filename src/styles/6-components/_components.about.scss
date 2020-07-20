@@ -25,6 +25,7 @@
     color: $color-off-white;
     z-index: 20;
 
+    @include respond(desktop) { transform: translateX(3rem); }
     @include respond(desktop) { transform: translateX(6rem); }
   }
 
@@ -36,8 +37,9 @@
       justify-content: center;
     position: relative;
     z-index: 0;
-
-    @include respond(desktop) { transform: translate(-6rem, 8rem); }
+    
+    @include respond(desktop) { transform: translate(-3rem, 8rem); }
+    @include respond(big-desktop) { transform: translate(-6rem, 8rem); }
   }
 
   &__left-content,

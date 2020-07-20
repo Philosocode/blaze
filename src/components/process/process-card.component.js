@@ -8,7 +8,6 @@ const ProcessCard = ({ description, FaIcon, isRight, stepNum, title }) => {
     "is-right": isRight
   });
 
-  const aosData = isRight ? "fade-left" : "fade-right";
   const aosDelay = isRight ? 300 : 0;
   const aosOffset = isRight ? -300 : 0;
 
@@ -22,7 +21,7 @@ const ProcessCard = ({ description, FaIcon, isRight, stepNum, title }) => {
   }
 
   return (
-    <div className={cardClasses} data-aos={aosData} data-aos-delay={aosDelay} data-aos-offset={aosOffset}>
+    <div className={cardClasses} data-aos="fade-up" data-aos-delay={aosDelay} data-aos-offset={aosOffset}>
       <div className="c-process__column">
         <div className="c-process__icon-container">
           <FaIcon className="c-process__icon" />

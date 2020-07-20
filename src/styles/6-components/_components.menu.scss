@@ -1,4 +1,6 @@
 .c-menu {
+  $menu-animation: moveInLeft 0.5s ease-in-out both;
+
   &__background {
     background-color: $color-black;
     height: 100%;
@@ -35,17 +37,22 @@
   }
 
   &__list {
+    position: fixed;
+      left: 5%;
+      bottom: 3%;
     margin-left: 0;
-    text-align: center;
+    width: 90%;
+    text-align: left;
   }
 
   &__item {
     font-family: $font-primary;
     font-size: $font-size-large;
-    font-weight: bold;
-    margin-top: $spacing-medium;
-    margin-bottom: $spacing-medium;
+    font-weight: 500;
+    margin-top: $spacing-small;
+    margin-bottom: $spacing-small;
     text-transform: uppercase;
+    list-style-type: none;
 
     &:last-of-type { margin-bottom: 0; }
   }
@@ -54,11 +61,13 @@
     background-color: $color-grey-dark;
     height: 1px;
     margin: $spacing-medium auto;
-    width: 16rem;
+    width: 100%;
+
+    &.is-animated { animation: moveInBottom 0.5s ease-in-out both; }
   }
 
   &__link {
-    color: $color-grey-lighter;
+    color: $color-grey-lightest;
     display: block;
     position: relative;
     text-decoration: none;
@@ -69,5 +78,9 @@
     }
 
     &:hover { color: var(--color-light); }
+  }
+
+  &__icon {
+    margin-right: $spacing-medium;
   }
 }

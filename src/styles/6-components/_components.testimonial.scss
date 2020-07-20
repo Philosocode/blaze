@@ -82,9 +82,7 @@
     border: 1px solid $color-grey-darker;
     border-radius: 50%;
     transition: border $transition-append, background-color $transition-append;
-    height: 1.25rem; width: 1.25rem;
-
-    @include respond(tab-port) { height: 1.5rem; width: 1.5rem; }
+    height: 1.5rem; width: 1.5rem;
 
     @include respond(tab-land) {
       height: 2rem; width: 2rem;
