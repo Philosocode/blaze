@@ -11,6 +11,13 @@ const Form = () => {
     email: "",
     message: "",
   });
+
+  const [touched, setTouched] = useState({
+    name: false,
+    email: false,
+    message: false
+  });
+  
   const { name, email, message } = values;
 
   const [captchaLoaded, setCaptchaLoaded] = useState(false);
@@ -19,6 +26,16 @@ const Form = () => {
   const isMobile = useMobileChecker();
 
   const recaptchaError = "ERROR: Please complete the reCAPTCHA.";
+
+  function handleBlur(ev) {
+    const inputName = ev.target.name;
+    if (touched[inputName]) return;
+
+    setTouched({
+      ...touched,
+      [inputName]: true
+    });
+  }
 
   function handleSubmit(ev) {
     if (!name || !email || !message) {
@@ -62,14 +79,18 @@ const Form = () => {
         name="name"
         type="text"
         onChange={handleChange}
+        onBlur={handleBlur}
         placeholder="Your name"
+        touched={touched["name"]}
         value={name}
       />
       <FormGroup
         name="email"
         type="email"
         onChange={handleChange}
+        onBlur={handleBlur}
         placeholder="Your email"
+        touched={touched["email"]}
         value={email}
       />
 
@@ -78,11 +99,13 @@ const Form = () => {
         type="textarea"
         placeholder="What do you need help with?"
         onChange={handleChange}
+        onBlur={handleBlur}
+        touched={touched["message"]}
         value={message}
       />
       
       <div className="c-form__group">
-        { error && <p className="c-form__error">{error}</p> }
+        <p className={`c-form__error ${error && "is-visible"}`}>{error}</p>
         {
           // Display an empty div until captcha loaded
           !captchaLoaded && <div className="c-form__empty-div"></div>

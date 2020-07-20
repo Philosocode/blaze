@@ -1,15 +1,22 @@
 .c-form {
   &__container {
+    font-family: $font-secondary;
+    margin: 0 auto;
     margin-top: $spacing-medium;
-
-    @include respond(tab-land) { margin-top: $spacing-large; }
+    width: 100%;
+    @include respond(tab-land) { margin-top: $spacing-large; width: 100%; }
   }
 
   &__group {
     display: flex;
       flex-direction: column;
     margin-bottom: $spacing-medium;
+    position: relative;
     width: 100%;
+
+    &:nth-last-of-type(2) {
+      margin-bottom: 0;
+    }
 
     @include respond(tab-land) { margin-bottom: $spacing-large; }
   }
@@ -20,47 +27,82 @@
       left: 2px;
     transition: all $transition-append;
     order: -1; // position above input
+    opacity: 0;
+    transform: translateY(4rem);
   }
 
   // Submit button w/ reCAPTCHA
   &__input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $color-grey-dark;
+    border-bottom: 1px solid $color-grey-darker;
     color: $color-grey-lightest;
     font-size: $font-size-normal;
     font-weight: 500;
     line-height: 1.6;
     margin-top: $spacing-smallest;
-    transition: border-bottom $transition-append, color $transition-append;
+    transition: color $transition-append;
 
     @include respond(tab-port) { font-size: $font-size-normal-big; }
     
-    &:focus {
-      background-color: transparent;
-      border-bottom: 1px solid $color-green-light;
-      outline: none;
-
-      &:invalid { border-bottom: 1px solid $color-red; }
-    }
-
+    &:focus { outline: none; }
+    
     &::-webkit-input-placeholder {
-      color: $color-grey-light;
+      color: $color-grey-dark;
+      letter-spacing: 0.5px;
       line-height: 2.4rem;
+      transition: opacity 0.2s ease-in;
     }
+
+    &::-moz-placeholder {
+      color: $color-grey;
+      letter-spacing: 1px;
+      line-height: 2.4rem;
+      transition: opacity 0.2s ease-in;
+    }
+
+    &:focus::-webkit-input-placeholder { opacity: 0;}
+    &:focus::-moz-placeholder { opacity: 0; }
   }
 
-  &__input:placeholder-shown ~ &__label  {
-    opacity: 0;
-    transform: translateY(4rem);
-    visibility: hidden;
+  // Expand border on focus or if touched + invalid
+  &__input:focus + &__border,
+  &__input.is-touched:invalid + &__border {
+    transform: scale(1);
+  }
+
+  &__input.is-touched:invalid + &__border {
+    background-color: $color-red;
+    background: $gradient-red;
+  }
+
+  // Show label above input on focus
+  &__input:focus ~ &__label  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__border {
+    background-color: $color-green;
+    background: $gradient-green;
+    height: 2px; width: 100%;
+    position: absolute;
+      bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $transition-append;
   }
 
   &__error {
     color: $color-red;
     font-size: $font-size-small;
     font-weight: 500;
-    margin-bottom: $spacing-small;
+    margin-bottom: $spacing-medium;
+    margin-top: $spacing-medium;
+    opacity: 0;
+    transition: opacity $transition-append;
+
+    &.is-visible { opacity: 1; }
 
     @include respond(tab-port) { font-size: $font-size-normal; }
   }

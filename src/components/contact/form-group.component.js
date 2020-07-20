@@ -1,17 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const FormGroup = ({ name, onChange, placeholder, type, value }) => { 
+const FormGroup = ({ name, onChange, onBlur, placeholder, touched, type, value }) => { 
+  const inputClasses = touched
+    ? "c-form__input is-touched"
+    : "c-form__input";
+
   function renderInput() {
     return (
       <input
         type={type}
-        className="c-form__input"
+        className={inputClasses}
         placeholder={placeholder ?? nameCapitalized}
         id={name}
         name={name}
         required
         value={value}
+        onBlur={onBlur}
         onChange={onChange}
       />
     );
@@ -20,7 +25,7 @@ const FormGroup = ({ name, onChange, placeholder, type, value }) => {
   function renderTextArea() {
     return (
       <textarea
-        className="c-form__input"
+        className={inputClasses}
         id={name}
         name={name}
         placeholder={placeholder ?? "Enter your message..."}
@@ -28,6 +33,7 @@ const FormGroup = ({ name, onChange, placeholder, type, value }) => {
         maxLength={999}
         required
         value={value}
+        onBlur={onBlur}
         onChange={onChange}
       />
     )
@@ -42,7 +48,7 @@ const FormGroup = ({ name, onChange, placeholder, type, value }) => {
           ? renderTextArea()
           : renderInput()
       }
-      {/* eslint-disable */}
+      <div className="c-form__border"></div>
       <label
         id={name}
         htmlFor={name}
