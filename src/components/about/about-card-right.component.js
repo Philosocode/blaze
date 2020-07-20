@@ -23,7 +23,7 @@ const AboutCardRight = () => {
 
   return (
     <div className="c-about__card c-about__card--right">
-      <BlockReveal color="black" direction="right" offset={500} noWrapper />
+      <BlockReveal color="black" direction="right" offset={300} noWrapper />
       <div className="c-about__right-content">
         <h2>Tech</h2>
         <div className="c-about__grid">

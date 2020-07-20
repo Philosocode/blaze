@@ -40,18 +40,18 @@ const ParticlesBackground = () => {
         value: 1,
         random: true,
         anim: {
-          enable: false,
-          speed: 1,
+          enable: true,
+          speed: 2,
           opacity_min: 0.1,
           sync: false
         }
       },
       size: {
-        value: 7,
+        value: 10,
         random: true,
         anim: {
           enable: false,
-          speed: 40,
+          speed: 20,
           size_min: 0.1,
           sync: false
         }
@@ -65,8 +65,8 @@ const ParticlesBackground = () => {
       },
       move: {
         enable: true,
-        speed: 1,
-        direction: 'none',
+        speed: 3,
+        direction: 'top',
         random: true,
         straight: false,
         out_mode: 'out',

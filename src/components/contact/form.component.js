@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Reaptcha from 'reaptcha';
 
 import { useForm } from "../../hooks/use-form.hook";
+import { useMobileChecker } from "../../hooks/use-mobile-checker.hook";
 import FormGroup from "./form-group.component";
 
 const Form = () => {
@@ -22,6 +23,7 @@ const Form = () => {
   const [captchaLoaded, setCaptchaLoaded] = useState(false);
   const [recaptchaValid, setRecaptchaValid] = useState(false);
   const [error, setError] = useState("");
+  const isMobile = useMobileChecker();
 
   const recaptchaError = "ERROR: Please complete the reCAPTCHA.";
 
@@ -62,7 +64,7 @@ const Form = () => {
 
   return (
     <form 
-      data-aos="fade-up"
+      data-aos="fade-left"
       data-aos-offset={300}
       data-aos-delay={300}
       acceptCharset="UTF-8" 
@@ -115,7 +117,7 @@ const Form = () => {
           onError={expiredRecaptcha}
           onLoad={recaptchaLoaded}
           inject={false}
-          size="compact"
+          size={ isMobile ? "compact" : "normal" }
           theme="dark"
         />
         
