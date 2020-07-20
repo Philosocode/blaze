@@ -64,7 +64,7 @@ const Form = () => {
 
   return (
     <form 
-      data-aos="fade-left"
+      data-aos="fade-up"
       data-aos-offset={300}
       data-aos-delay={300}
       acceptCharset="UTF-8" 
