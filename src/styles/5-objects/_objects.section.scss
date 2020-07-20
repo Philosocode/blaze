@@ -1,6 +1,7 @@
 .o-section {
   padding-top: 11rem;
   padding-bottom: 11rem;
+  position: relative;
 
   @include respond(tab-port) {
     padding-top: 16rem;
