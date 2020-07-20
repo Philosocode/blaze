@@ -1,14 +1,4 @@
 .c-testimonial {
-  &__arrow {
-    color: $color-grey-darker;
-    transition: color $transition-append, transform $transition-append;
-    font-size: 5rem;
-
-    @include respond(tab-land) { font-size: 5rem; }
-
-    &:hover { color: var(--color); }
-  }
-
   &__card { 
     background-color: $color-off-black;
     border-radius: 3px;
@@ -18,9 +8,12 @@
     margin: $spacing-medium auto;
     padding: $spacing-medium;
     position: relative;
-    width: 100%; max-width: 100rem;
+    width: 80%; max-width: 100rem;
 
-    @include respond(tab-port) { width: 80%; }
+    @include respond(tab-port) {
+      width: 80%;
+    }
+
     @include respond(tab-land) {
       margin: $spacing-large auto;
       padding: $spacing-larger;
@@ -35,10 +28,16 @@
 
   &__icon {
     color: var(--color-faded);
-    font-size: 4rem;
+    font-size: 3rem;
     position: absolute;
+      top: -1rem;
+      left: -1rem;
+
+    @include respond(tab-port) {
+      font-size: 5rem;
       top: -2rem;
       left: -2rem;
+    }
 
     @include respond(tab-land) {
       font-size: 10rem;
@@ -54,88 +53,52 @@
     font-weight: 500;
     white-space: pre-line;
 
+    @include respond(tab-port) { font-size: $font-size-normal-big; }
     @include respond(tab-land) { font-size: $font-size-large; }
   }
 
   &__person {
     color: $color-grey-lighter;
     font-weight: bold;
-    font-size: $font-size-small;
-    margin-top: $spacing-large;
+    font-size: $font-size-smaller;
+    margin-top: $spacing-medium;
 
-    @include respond(tab-land) { font-size: $font-size-medium; }
+    @include respond(tab-port) { font-size: $font-size-small; }
+    @include respond(tab-land) {
+      font-size: $font-size-medium;
+      margin-top: $spacing-large;
+    }
   }
 
   &__position {
     color: $color-grey;
     font-size: $font-size-smallest;
-    
+
+    @include respond(tab-port) { font-size: $font-size-smaller; }
     @include respond(tab-land) { font-size: $font-size-small; }
   }
-}
 
-.slick {
-  &-arrow {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    position: absolute;  
-      top: 50%;
-      transform: translateY(-50%);
-    z-index: 10;
-  
-    &:focus, &:active { outline: none; }
-  }
+  &__dot {
+    border: 1px solid $color-grey-darker;
+    border-radius: 50%;
+    transition: border $transition-append, background-color $transition-append;
+    height: 1.25rem; width: 1.25rem;
 
-  &-disabled {
-    opacity: 0;
-    transition: opacity $transition-append;
-  }
+    @include respond(tab-port) { height: 1.5rem; width: 1.5rem; }
 
-  &-list {
-    padding: 0 !important;
-  }
+    @include respond(tab-land) {
+      height: 2rem; width: 2rem;
+      margin: auto 5px;
+    }
 
-  &-next {
-    right: 0%;
-  }
-
-  &-track {
-    cursor: default;
-  }
-
-  &-slide &-current {
-    opacity: 0;
+    &.is-selected {
+      border-color: var(--color-faded);
+      background-color: var(--color-faded);
+    }
   }
 }
 
-
-.slick-dots {
-	display: flex !important;
-	  justify-content: center;
-  list-style-type: none;
-	margin: 0;
-	padding: 1rem 0;
-  
-  li { margin: 0 0.25rem; }
-	
-  button {
-    background-color: transparent;
-    border: 2px solid $color-grey-darkest;
-    border-radius: 100%;
-    display: block;
-    height: 1.5rem; width: 1.5rem;
-    margin: auto $spacing-smaller;
-    padding: 0;
-    text-indent: -9999px;
-    transition: background $transition-append;
-
-    &:hover { background-color: $color-grey-darkest; cursor: pointer; }
-    &:focus, &:active { outline: none; }
-  }
-	
-  li.slick-active button {
-    border: 2px solid transparent;
-    background-color: var(--color-faded);
-  }
+.BrainhubCarousel__thumbnail {
+  background: none;
+  opacity: 1 !important;
 }
